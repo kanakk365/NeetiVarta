@@ -17,9 +17,9 @@ export default function MembershipsPage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="flex-1 pt-20">
+      <main id="main-content" className="flex-1">
         {/* Cover Section */}
-        <section className="relative py-20 lg:py-32 bg-gradient-to-br from-brand-orange via-orange-600 to-yellow-600 dark:from-brand-orange/90 dark:via-orange-700 dark:to-yellow-700 text-white">
+        <section className="relative pt-32 pb-20 lg:pb-32 bg-gradient-to-br from-brand-orange via-orange-600 to-yellow-600 dark:from-brand-orange/90 dark:via-orange-700 dark:to-yellow-700 text-white">
           <div className="absolute inset-0">
             <Image
               src="/abstract-membership-pattern.png"

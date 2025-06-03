@@ -11,11 +11,9 @@ export default function InsightsPage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="flex-1 pt-20">
-        {" "}
-        {/* Added pt-20 for spacing below fixed header */}
+      <main id="main-content" className="flex-1">
         {/* Page Header */}
-        <section className="py-12 lg:py-16 bg-slate-100 dark:bg-slate-800">
+        <section className="pt-32 pb-12 lg:pb-16 bg-slate-100 dark:bg-slate-800">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="font-sora text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100">
               Insights & Analysis
@@ -26,7 +24,7 @@ export default function InsightsPage() {
           </div>
         </section>
         {/* Main Content Area */}
-        <section className="py-12 lg:py-16">
+        <section className="py-12 lg:py-16 bg-[#0f172a] ">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:flex lg:gap-12">
               {/* Blog Post Content */}
@@ -183,7 +181,7 @@ export default function InsightsPage() {
                   </p>
                   <Button
                     variant="outline"
-                    className="w-full border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white dark:border-orange-500 dark:text-orange-400 dark:hover:bg-orange-500 dark:hover:text-white"
+                    className="w-full bg-[#0f172a] border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white dark:border-orange-500 dark:text-orange-400 dark:hover:bg-orange-500 dark:hover:text-white"
                     onClick={() => alert("Newsletter subscription functionality coming soon!")}
                   >
                     <Send className="w-4 h-4 mr-2" />

@@ -65,7 +65,7 @@ export default function ContactSection() {
                   name="name"
                   required
                   placeholder="Your full name"
-                  className="bg-[#0f172a] border-0"
+                  className="dark:bg-[#0f172a] border-0"
                 />
               </div>
               <div>
@@ -81,7 +81,7 @@ export default function ContactSection() {
                   name="email"
                   required
                   placeholder="your.email@example.com"
-                  className="bg-[#0f172a] border-0"
+                  className="dark:bg-[#0f172a] border-0"
                 />
               </div>
               <div>
@@ -92,10 +92,10 @@ export default function ContactSection() {
                   Subject *
                 </label>
                 <Select  name="subject" required>
-                  <SelectTrigger className="bg-[#0f172a] border-0">
+                  <SelectTrigger className="dark:bg-[#0f172a] border-0">
                     <SelectValue placeholder="Select a subject" />
                   </SelectTrigger>
-                  <SelectContent className="bg-[#0f172a] border-0 hover:bg-[#0f172a]">
+                  <SelectContent className="dark:bg-[#0f172a]border-0 hover:bg-[#0f172a]">
                     <SelectItem value="general">General Inquiry</SelectItem>
                     <SelectItem value="course">Course Inquiry</SelectItem>
                     <SelectItem value="collaboration">Collaboration</SelectItem>
@@ -110,7 +110,7 @@ export default function ContactSection() {
                   Message *
                 </label>
                 <Textarea
-                className="bg-[#0f172a] border-0"
+                className="dark:bg-[#0f172a] border-0"
                   id="message"
                   name="message"
                   rows={5}

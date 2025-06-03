@@ -184,18 +184,18 @@ export default function Header() {
     setOpenMobileSubmenu(openMobileSubmenu === title ? null : title);
   };
 
-  const headerBaseTextColor = useTransparentHeader
+  const headerBaseTextColor = useTransparentHeader || !isScrolled
     ? "text-white dark:text-gray-50"
     : "text-gray-900 dark:text-gray-100";
-  const navLinkBaseTextColor = useTransparentHeader
+  const navLinkBaseTextColor = useTransparentHeader || !isScrolled
     ? "text-white dark:text-gray-200"
     : "text-gray-700 dark:text-gray-300";
 
-  const navLinkHoverFocusBg = useTransparentHeader
+  const navLinkHoverFocusBg = useTransparentHeader || !isScrolled
     ? "hover:bg-white/10 dark:hover:bg-white/20 focus:bg-white/10 dark:focus:bg-white/20"
     : "hover:bg-gray-100/50 dark:hover:bg-slate-800/50 focus:bg-gray-100/50 dark:focus:bg-slate-800/50";
 
-  const navLinkOpenBg = useTransparentHeader
+  const navLinkOpenBg = useTransparentHeader || !isScrolled
     ? "data-[state=open]:bg-white/15 dark:data-[state=open]:bg-white/25"
     : "data-[state=open]:bg-gray-100/60 dark:data-[state=open]:bg-slate-800/60";
 
@@ -319,7 +319,7 @@ export default function Header() {
         <div className="flex-shrink-0 flex items-center gap-2">
           <ModeToggle
             className={cn(
-              useTransparentHeader
+              useTransparentHeader || !isScrolled
                 ? "bg-transparent text-white dark:text-gray-200 hover:text-white border-white/30 hover:bg-white/10 dark:hover:border-white/50 dark:hover:bg-white/10"
                 : "text-gray-700 dark:text-gray-300 border-gray-300 dark:bg-transparent dark:border-slate-700 hover:bg-gray-100/50 dark:hover:bg-slate-800/50"
             )}
@@ -330,7 +330,7 @@ export default function Header() {
             size="sm"
             className={cn(
               "font-sans text-xs sm:text-sm", // Always show for sm and up
-              useTransparentHeader
+              useTransparentHeader || !isScrolled
                 ? "border-white/50 bg-transparent text-white dark:text-gray-200 hover:bg-white/10 hover:border-white hover:text-white dark:hover:text-gray-50"
                 : "border-gray-300 dark:border-slate-700 text-gray-700 dark:bg-transparent dark:text-gray-300 hover:bg-gray-100/50 dark:hover:bg-slate-800/50 hover:text-gray-900 dark:hover:text-gray-100"
             )}
@@ -353,7 +353,7 @@ export default function Header() {
               aria-label="Toggle menu"
               className={cn(
                 "hover:bg-opacity-50", // General hover opacity
-                useTransparentHeader
+                useTransparentHeader || !isScrolled
                   ? "text-white dark:text-gray-200 hover:bg-white/10 dark:hover:bg-white/20"
                   : "text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-800"
               )}

@@ -1,26 +1,32 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CalendarDays, Video, Ticket, Presentation, Info } from "lucide-react"
-import Header from "@/components/layout/header"
-import Footer from "@/components/layout/footer"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CalendarDays, Video, Ticket, Presentation, Info } from "lucide-react";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 
 interface Webinar {
-  id: string
-  title: string
-  subtitle?: string
-  date: string
-  time: string
-  status: "upcoming" | "past"
-  price: string
-  description?: string
-  coverImageUrl?: string
-  actionLink?: string
-  actionText?: string
+  id: string;
+  title: string;
+  subtitle?: string;
+  date: string;
+  time: string;
+  status: "upcoming" | "past";
+  price: string;
+  description?: string;
+  coverImageUrl?: string;
+  actionLink?: string;
+  actionText?: string;
 }
 
 const webinarsData: Webinar[] = [
@@ -66,7 +72,7 @@ const webinarsData: Webinar[] = [
     actionLink: "#", // Placeholder for registration link
     actionText: "Register Now",
   },
-]
+];
 
 const WebinarCard = ({ webinar }: { webinar: Webinar }) => (
   <Card className="flex flex-col bg-white dark:bg-slate-900 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg overflow-hidden">
@@ -86,7 +92,9 @@ const WebinarCard = ({ webinar }: { webinar: Webinar }) => (
         {webinar.title}
       </CardTitle>
       {webinar.subtitle && (
-        <p className="font-sans text-sm text-gray-600 dark:text-gray-400 mt-1">{webinar.subtitle}</p>
+        <p className="font-sans text-sm text-gray-600 dark:text-gray-400 mt-1">
+          {webinar.subtitle}
+        </p>
       )}
     </CardHeader>
     <CardContent className="p-5 pt-0 flex-grow space-y-3">
@@ -103,37 +111,50 @@ const WebinarCard = ({ webinar }: { webinar: Webinar }) => (
           <Info className="w-4 h-4 mr-2 text-brand-orange dark:text-orange-400" />
         )}
         <span
-          className={webinar.price.toLowerCase() === "free" ? "font-semibold text-green-600 dark:text-green-400" : ""}
+          className={
+            webinar.price.toLowerCase() === "free"
+              ? "font-semibold text-green-600 dark:text-green-400"
+              : ""
+          }
         >
           {webinar.price}
         </span>
       </div>
       {webinar.description && (
-        <p className="font-sans text-sm text-gray-600 dark:text-gray-300 line-clamp-3">{webinar.description}</p>
+        <p className="font-sans text-sm text-gray-600 dark:text-gray-300 line-clamp-3">
+          {webinar.description}
+        </p>
       )}
     </CardContent>
     {webinar.actionLink && webinar.actionText && (
       <CardFooter className="p-5 bg-gray-50 dark:bg-slate-800/50">
-        <Button asChild className="w-full font-sans bg-brand-orange hover:bg-brand-orange/90">
+        <Button
+          asChild
+          className="w-full font-sans bg-brand-orange hover:bg-brand-orange/90"
+        >
           <Link href={webinar.actionLink}>
-            {webinar.status === "past" ? <Video className="w-4 h-4 mr-2" /> : <Ticket className="w-4 h-4 mr-2" />}
+            {webinar.status === "past" ? (
+              <Video className="w-4 h-4 mr-2" />
+            ) : (
+              <Ticket className="w-4 h-4 mr-2" />
+            )}
             {webinar.actionText}
           </Link>
         </Button>
       </CardFooter>
     )}
   </Card>
-)
+);
 
 const filterWebinars = (status?: "upcoming" | "past") => {
-  if (!status) return webinarsData // For 'All' tab
-  return webinarsData.filter((webinar) => webinar.status === status)
-}
+  if (!status) return webinarsData; // For 'All' tab
+  return webinarsData.filter((webinar) => webinar.status === status);
+};
 
 export default function WebinarsPage() {
-  const upcomingWebinars = filterWebinars("upcoming")
-  const pastWebinars = filterWebinars("past")
-  const allWebinars = filterWebinars()
+  const upcomingWebinars = filterWebinars("upcoming");
+  const pastWebinars = filterWebinars("past");
+  const allWebinars = filterWebinars();
 
   const renderWebinarList = (webinars: Webinar[], tabName: string) => {
     if (webinars.length === 0) {
@@ -143,9 +164,11 @@ export default function WebinarsPage() {
           <h3 className="font-sora text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
             No {tabName.toLowerCase()} webinars at the moment.
           </h3>
-          <p className="font-sans text-gray-500 dark:text-gray-400">Please check back later for updates.</p>
+          <p className="font-sans text-gray-500 dark:text-gray-400">
+            Please check back later for updates.
+          </p>
         </div>
-      )
+      );
     }
     return (
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -153,21 +176,26 @@ export default function WebinarsPage() {
           <WebinarCard key={webinar.id} webinar={webinar} />
         ))}
       </div>
-    )
-  }
+    );
+  };
 
   return (
     <>
       <Header />
-      <main id="main-content" className="flex-1 pt-20 bg-gray-50 dark:bg-slate-800">
+      <main
+        id="main-content"
+        className="flex-1 pt-20 bg-gray-50 dark:bg-slate-800"
+      >
         {/* Page Header Section */}
         <section className="py-12 lg:py-16 bg-slate-100 dark:bg-slate-800">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Presentation className="w-16 h-16 text-brand-orange dark:text-orange-400 mx-auto mb-6" />
-            <h1 className="font-sora text-4xl sm:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">Webinars</h1>
+            <h1 className="font-sora text-4xl sm:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+              Webinars
+            </h1>
             <p className="font-sans text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Join our insightful webinars to learn from experts, discuss critical policy issues, and expand your
-              knowledge.
+              Join our insightful webinars to learn from experts, discuss
+              critical policy issues, and expand your knowledge.
             </p>
           </div>
         </section>
@@ -175,20 +203,26 @@ export default function WebinarsPage() {
         {/* Tabs Section */}
         <section className="py-12 lg:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Tabs defaultValue="all" className="w-full">
-              <TabsList className="grid w-full grid-cols-3 md:w-1/2 lg:w-1/3 mx-auto mb-10">
+            <Tabs  defaultValue="all" className="w-full ">
+              <TabsList className="grid w-full grid-cols-3 md:w-1/2 lg:w-1/3 mx-auto mb-10 dark:bg-[#0f172a]">
                 <TabsTrigger value="upcoming">Upcoming</TabsTrigger>
                 <TabsTrigger value="past">Past</TabsTrigger>
                 <TabsTrigger value="all">All</TabsTrigger>
               </TabsList>
-              <TabsContent value="upcoming">{renderWebinarList(upcomingWebinars, "Upcoming")}</TabsContent>
-              <TabsContent value="past">{renderWebinarList(pastWebinars, "Past")}</TabsContent>
-              <TabsContent value="all">{renderWebinarList(allWebinars, "All")}</TabsContent>
+              <TabsContent value="upcoming">
+                {renderWebinarList(upcomingWebinars, "Upcoming")}
+              </TabsContent>
+              <TabsContent value="past">
+                {renderWebinarList(pastWebinars, "Past")}
+              </TabsContent>
+              <TabsContent value="all">
+                {renderWebinarList(allWebinars, "All")}
+              </TabsContent>
             </Tabs>
           </div>
         </section>
       </main>
       <Footer />
     </>
-  )
+  );
 }
