@@ -321,7 +321,7 @@ export default function Header() {
             className={cn(
               useTransparentHeader || !isScrolled
                 ? "bg-transparent text-white dark:text-gray-200 hover:text-white border-white/30 hover:bg-white/10 dark:hover:border-white/50 dark:hover:bg-white/10"
-                : "text-gray-700 dark:text-gray-300 border-gray-300 dark:bg-transparent dark:border-slate-700 hover:bg-gray-100/50 dark:hover:bg-slate-800/50"
+                : "text-gray-700 dark:text-gray-300 bg-transparent border-0 border-gray-300 dark:bg-transparent dark:border-slate-700 hover:bg-gray-100/50 dark:hover:bg-slate-800/50"
             )}
           />
           <Button
@@ -329,7 +329,7 @@ export default function Header() {
             asChild
             size="sm"
             className={cn(
-              "font-sans text-xs sm:text-sm", // Always show for sm and up
+              "font-sans text-xs sm:text-sm hidden sm:flex ", 
               useTransparentHeader || !isScrolled
                 ? "border-white/50 bg-transparent text-white dark:text-gray-200 hover:bg-white/10 hover:border-white hover:text-white dark:hover:text-gray-50"
                 : "border-gray-300 dark:border-slate-700 text-gray-700 dark:bg-transparent dark:text-gray-300 hover:bg-gray-100/50 dark:hover:bg-slate-800/50 hover:text-gray-900 dark:hover:text-gray-100"
