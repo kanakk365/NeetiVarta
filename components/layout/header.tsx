@@ -320,7 +320,7 @@ export default function Header() {
           <ModeToggle
             className={cn(
               useTransparentHeader || !isScrolled
-                ? "bg-transparent text-white dark:text-gray-200 hover:text-white border-white/30 hover:bg-white/10 dark:hover:border-white/50 dark:hover:bg-white/10"
+                ? "bg-transparent text-white dark:text-gray-200 border-0 hover:text-white border-white/30 hover:bg-white/10 dark:hover:border-white/50 dark:hover:bg-white/10"
                 : "text-gray-700 dark:text-gray-300 bg-transparent border-0 border-gray-300 dark:bg-transparent dark:border-slate-700 hover:bg-gray-100/50 dark:hover:bg-slate-800/50"
             )}
           />
@@ -354,14 +354,14 @@ export default function Header() {
               className={cn(
                 "hover:bg-opacity-50", // General hover opacity
                 useTransparentHeader || !isScrolled
-                  ? "text-white dark:text-gray-200 hover:bg-white/10 dark:hover:bg-white/20"
-                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-800"
+                  ? "text-white dark:text-gray-200 hover:bg-white/10 "
+                  : "text-white dark:text-gray-300 hover:bg-gray-200 "
               )}
             >
               {isMobileMenuOpen ? (
-                <X className="w-5 h-5" />
+                <X className="w-6 h-6 text-white" />
               ) : (
-                <Menu className="w-5 h-5" />
+                <Menu className="w-6 h-6 text-white" />
               )}
             </Button>
           </div>
