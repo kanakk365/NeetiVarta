@@ -247,12 +247,11 @@ export default function NeetiSahayakPage() {
                 <Link href="/contact">
                   Locate Center <MapPin className="w-5 h-5 ml-2" />
                 </Link>
-              </Button>
-              <Button
+              </Button>              <Button
                 asChild
                 variant="outline"
                 size="lg"
-                className="font-sans border-white text-white hover:bg-white/10 px-8 py-3 text-lg font-semibold"
+                className="font-sans border-white/80 text-brand-orange hover:bg-white hover:text-brand-orange hover:border-white transition-all duration-300 px-8 py-3 text-lg font-semibold"
               >
                 <Link href="/about">
                   Learn More <ArrowRight className="w-5 h-5 ml-2" />
