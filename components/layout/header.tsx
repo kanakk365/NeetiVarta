@@ -62,7 +62,8 @@ const navigationItems: NavItem[] = [
     description: "Learn more about Neeti Varta, our mission, and our insights.",
     items: [
       { title: "About Us", href: "/about" },
-      { title: "Insights", href: "/insights" },
+      { title: "Neeti Kaushal", href: "/neeti-kaushal" },
+      { title: "Neeti Sahayak", href: "/neeti-sahayak" },
     ],
     dropdownCta: { text: "Discover Our Story", href: "/about" },
   },

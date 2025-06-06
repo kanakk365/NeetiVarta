@@ -1,21 +1,40 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Target, Eye } from "lucide-react"
-import Header from "@/components/layout/header" // Added import
-import Footer from "@/components/layout/footer" // Added import
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Target, Eye } from "lucide-react";
+import Header from "@/components/layout/header"; // Added import
+import Footer from "@/components/layout/footer"; // Added import
 
 const teamMembers = [
-  { name: "Dr. Amit Kumar Gupta", role: "Founder, Director & CEO", imageUrl: "/dr-amit-kumar-gupta-portrait.png" },
-  { name: "Prapti Gupta", role: "Director", imageUrl: "/prapti-gupta-portrait.png" },
-  { name: "Miss Himani Verma", role: "Chief Program Officer", imageUrl: "/himani-verma-cpo.png" },
-]
+  {
+    name: "Dr. Amit Kumar Gupta",
+    role: "Founder, Director & CEO",
+    imageUrl: "/dr-amit-kumar-gupta-portrait.png",
+  },
+  {
+    name: "Prapti Gupta",
+    role: "Director",
+    imageUrl: "/prapti-gupta-portrait.png",
+  },
+  {
+    name: "Miss Himani Verma",
+    role: "Chief Program Officer",
+    imageUrl: "/himani-verma-cpo.png",
+  },
+];
 
 const advisoryBoardMembers = [
   {
     name: "Prof. Anupama Saxena",
-    description: "Professor, Department of Political Science, Guru Ghasidas Vishwavidyalaya, Bilaspur, Chhattisgarh",
+    description:
+      "Professor, Department of Political Science, Guru Ghasidas Vishwavidyalaya, Bilaspur, Chhattisgarh",
     imageUrl: "/prof-anupama-saxena-portrait.png",
   },
   {
@@ -35,12 +54,13 @@ const advisoryBoardMembers = [
     description: "Former bureaucrat, Rajasthan Public Service Commission",
     imageUrl: "/himani-verma-bureaucrat.png",
   },
-]
+];
 
 const visitingFellows = [
   {
     name: "Dr. Sajjan Kumar Singh",
-    description: "Roaming researcher. Political Analyst. Doctorate from Jawaharlal Nehru University, 2017.",
+    description:
+      "Roaming researcher. Political Analyst. Doctorate from Jawaharlal Nehru University, 2017.",
     imageUrl: "/dr-sajjan-kumar-singh-portrait.png",
   },
   {
@@ -50,20 +70,24 @@ const visitingFellows = [
   },
   {
     name: "Dr. Anindya Sundar Polley",
-    description: "Assistant Professor, Department of English, Munger State University, Bihar",
+    description:
+      "Assistant Professor, Department of English, Munger State University, Bihar",
     imageUrl: "/portrait-anindya-sundar-polley.png",
   },
   {
     name: "Vivek Kumar Hind",
-    description: "Assistant Professor, Department of Political Science, Tilka Manjhi State University, Bihar",
+    description:
+      "Assistant Professor, Department of Political Science, Tilka Manjhi State University, Bihar",
     imageUrl: "/placeholder.svg?width=200&height=200",
   },
-]
+];
 
 const courses = [
   {
-    title: "Public Policy Unveiled: Understanding, Essential Skills, and Career Opportunities",
-    description: "Unlock the world of public policy and embark on a rewarding career path.",
+    title:
+      "Public Policy Unveiled: Understanding, Essential Skills, and Career Opportunities",
+    description:
+      "Unlock the world of public policy and embark on a rewarding career path.",
     price: "₹599",
     imageUrl: "/placeholder.svg?width=450&height=280",
     enrollLink: "#", // Placeholder link
@@ -76,7 +100,7 @@ const courses = [
     imageUrl: "/placeholder.svg?width=450&height=280",
     enrollLink: "#", // Placeholder link
   },
-]
+];
 
 export default function AboutPage() {
   return (
@@ -90,12 +114,15 @@ export default function AboutPage() {
               Welcome to Neeti Varta Institute
             </h1>
             <p className="font-sans text-lg lg:text-xl text-gray-200 dark:text-gray-300 leading-relaxed">
-              Neeti Varta Institute of Policy Research Pvt. Ltd. is a pioneering social enterprise dedicated to
-              enhancing policy literacy and civic engagement, particularly in Tier 2 and Tier 3 cities of India. We aim
-              to democratize policy knowledge, enabling individuals to understand public policy, engage in the
-              democratic process, and influence positive societal change. Our core mission is to empower citizens, with
-              a strong focus on making policy education accessible through cutting-edge technology, educational
-              resources, and community-driven initiatives.
+              Neeti Varta Institute of Policy Research Pvt. Ltd. is a pioneering
+              social enterprise dedicated to enhancing policy literacy and civic
+              engagement, particularly in Tier 2 and Tier 3 cities of India. We
+              aim to democratize policy knowledge, enabling individuals to
+              understand public policy, engage in the democratic process, and
+              influence positive societal change. Our core mission is to empower
+              citizens, with a strong focus on making policy education
+              accessible through cutting-edge technology, educational resources,
+              and community-driven initiatives.
             </p>
           </div>
         </section>
@@ -108,12 +135,16 @@ export default function AboutPage() {
                   <div className="p-3 rounded-md bg-brand-orange/10 text-brand-orange dark:bg-orange-500/20 dark:text-orange-400">
                     <Target className="w-8 h-8" />
                   </div>
-                  <CardTitle className="font-sora text-2xl text-gray-900 dark:text-gray-100">Our Mission</CardTitle>
+                  <CardTitle className="font-sora text-2xl text-gray-900 dark:text-gray-100">
+                    Our Mission
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="font-sans text-gray-700 dark:text-gray-300 leading-relaxed">
-                    To empower individuals, particularly in Tier 2 and Tier 3 cities, with the knowledge and skills
-                    necessary to understand and influence public policy, and become active and informed citizens.
+                    To empower individuals, particularly in Tier 2 and Tier 3
+                    cities, with the knowledge and skills necessary to
+                    understand and influence public policy, and become active
+                    and informed citizens.
                   </p>
                 </CardContent>
               </Card>
@@ -122,12 +153,15 @@ export default function AboutPage() {
                   <div className="p-3 rounded-md bg-brand-blue/10 text-brand-blue dark:bg-blue-500/20 dark:text-blue-400">
                     <Eye className="w-8 h-8" />
                   </div>
-                  <CardTitle className="font-sora text-2xl text-gray-900 dark:text-gray-100">Our Vision</CardTitle>
+                  <CardTitle className="font-sora text-2xl text-gray-900 dark:text-gray-100">
+                    Our Vision
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="font-sans text-gray-700 dark:text-gray-300 leading-relaxed">
-                    To create a society where every individual, regardless of their geographic location, can contribute
-                    to policy-making and drive positive social change.
+                    To create a society where every individual, regardless of
+                    their geographic location, can contribute to policy-making
+                    and drive positive social change.
                   </p>
                 </CardContent>
               </Card>
@@ -159,7 +193,9 @@ export default function AboutPage() {
                   <CardTitle className="font-sora text-xl font-semibold text-gray-900 dark:text-gray-100 mb-1">
                     {member.name}
                   </CardTitle>
-                  <p className="font-sans text-brand-orange dark:text-orange-400 text-sm">{member.role}</p>
+                  <p className="font-sans text-brand-orange dark:text-orange-400 text-sm">
+                    {member.role}
+                  </p>
                 </Card>
               ))}
             </div>
@@ -201,7 +237,7 @@ export default function AboutPage() {
           </div>
         </section>
         {/* Visiting Fellows Section */}
-        <section className="py-16 lg:py-24 bg-white dark:bg-slate-900">
+        <section className="py-16 lg:py-24 lg:pb-32 bg-white dark:bg-slate-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="font-sora text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
@@ -235,55 +271,8 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-        {/* Courses Section */}
-        <section className="py-16 lg:py-24 bg-gray-50 dark:bg-slate-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="font-sora text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-                Course Packages
-              </h2>
-              <div className="w-24 h-1 bg-brand-orange mx-auto"></div>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-              {courses.map((course) => (
-                <Card
-                  key={course.title}
-                  className="flex flex-col bg-white dark:bg-slate-800 shadow-xl hover:shadow-2xl transition-shadow duration-300 rounded-lg overflow-hidden"
-                >
-                  <div className="relative w-full h-64">
-                    <Image
-                      src={course.imageUrl || "/placeholder.svg"}
-                      alt={course.title}
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                  </div>
-                  <CardHeader className="p-6">
-                    <CardTitle className="font-sora text-xl lg:text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                      {course.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-6 pt-0 flex-grow">
-                    <p className="font-sans text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                      {course.description}
-                    </p>
-                  </CardContent>
-                  <CardFooter className="p-6 bg-gray-50 dark:bg-slate-800/50">
-                    <Button
-                      asChild
-                      size="lg"
-                      className="w-full font-sans bg-brand-orange hover:bg-brand-orange/90 text-white"
-                    >
-                      <Link href={course.enrollLink}>Enroll for {course.price}</Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </>
-  )
+  );
 }
