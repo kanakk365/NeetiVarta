@@ -23,10 +23,15 @@ function Hero() {
 
   return (
     <div
-      className="w-full bg-gradient-to-br from-brand-blue via-slate-900 to-brand-orange dark:from-brand-blue/90 dark:via-slate-950 dark:to-brand-orange/90 min-h-screen flex items-center"
+      className="w-full min-h-screen flex items-center relative bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('/newPar.png')"
+      }}
       id="hero"
     >
-      <div className="container mx-auto">
+      {/* Background overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/70 via-slate-900/50 to-brand-orange/70 dark:from-brand-blue/80 dark:via-slate-950/60 dark:to-brand-orange/80"></div>
+      <div className="container mx-auto relative z-10">
         <div className="flex gap-8 py-20 lg:py-32 items-center justify-center flex-col">
           <div>
             <Button

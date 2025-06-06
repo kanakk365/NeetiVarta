@@ -140,9 +140,9 @@ export default function Header() {
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
       const headerActualHeight =
-        (document.querySelector("header > div > div") as HTMLElement)
-          ?.offsetHeight || 70;
-      const headerOffset = headerActualHeight + 40;
+        (document.querySelector("header > div") as HTMLElement)
+          ?.offsetHeight || (window.innerWidth < 640 ? 60 : 70);
+      const headerOffset = headerActualHeight + (window.innerWidth < 640 ? 20 : 40);
 
       const elementPosition = targetElement.getBoundingClientRect().top;
       const offsetPosition =
@@ -184,26 +184,30 @@ export default function Header() {
     setOpenMobileSubmenu(openMobileSubmenu === title ? null : title);
   };
 
-  const headerBaseTextColor = useTransparentHeader || !isScrolled
-    ? "text-white dark:text-gray-50"
-    : "text-gray-900 dark:text-gray-100";
-  const navLinkBaseTextColor = useTransparentHeader || !isScrolled
-    ? "text-white dark:text-gray-200"
-    : "text-gray-700 dark:text-gray-300";
+  const headerBaseTextColor =
+    useTransparentHeader || !isScrolled
+      ? "text-white dark:text-gray-50"
+      : "text-gray-900 dark:text-gray-100";
+  const navLinkBaseTextColor =
+    useTransparentHeader || !isScrolled
+      ? "text-white dark:text-gray-200"
+      : "text-gray-700 dark:text-gray-300";
 
-  const navLinkHoverFocusBg = useTransparentHeader || !isScrolled
-    ? "hover:bg-white/10 dark:hover:bg-white/20 focus:bg-white/10 dark:focus:bg-white/20"
-    : "hover:bg-gray-100/50 dark:hover:bg-slate-800/50 focus:bg-gray-100/50 dark:focus:bg-slate-800/50";
+  const navLinkHoverFocusBg =
+    useTransparentHeader || !isScrolled
+      ? "hover:bg-white/10 dark:hover:bg-white/20 focus:bg-white/10 dark:focus:bg-white/20"
+      : "hover:bg-gray-100/50 dark:hover:bg-slate-800/50 focus:bg-gray-100/50 dark:focus:bg-slate-800/50";
 
-  const navLinkOpenBg = useTransparentHeader || !isScrolled
-    ? "data-[state=open]:bg-white/15 dark:data-[state=open]:bg-white/25"
-    : "data-[state=open]:bg-gray-100/60 dark:data-[state=open]:bg-slate-800/60";
+  const navLinkOpenBg =
+    useTransparentHeader || !isScrolled
+      ? "data-[state=open]:bg-white/15 dark:data-[state=open]:bg-white/25"
+      : "data-[state=open]:bg-gray-100/60 dark:data-[state=open]:bg-slate-800/60";
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 p-4">
+    <header className="fixed top-0 left-0 right-0 z-50 p-2 sm:p-4">
       <div
         className={cn(
-          "container mx-auto max-w-7xl h-16 flex items-center justify-between gap-4 px-4 sm:px-6 lg:px-8",
+          "container mx-auto max-w-7xl min-h-[60px] sm:h-16 flex items-center justify-between gap-2 sm:gap-4 px-3 sm:px-4 md:px-6 lg:px-8",
           "rounded-xl transition-all duration-300 ease-in-out",
           isScrolled
             ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-lg border border-white/20 dark:border-slate-800/30"
@@ -211,16 +215,19 @@ export default function Header() {
         )}
       >
         {/* Logo */}
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 max-w-[140px] sm:max-w-[180px] md:max-w-none">
           <Link
             href="/"
             className={cn(
-              "font-sora text-lg sm:text-xl font-bold hover:text-brand-orange dark:hover:text-brand-orange transition-colors duration-300",
+              "font-sora text-lg sm:text-xl font-bold hover:text-brand-orange dark:hover:text-brand-orange transition-colors duration-300 block",
               headerBaseTextColor
             )}
             onClick={() => handleNavLinkClick("/", true, isMobileMenuOpen)}
           >
-            Neeti Varta Institute
+            <div className="flex flex-col text-center leading-tight">
+              <div className="text-bas sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight">Neeti Varta</div>
+              <span className="text-[8px] sm:text-sm font-normal leading-tight opacity-90">Institute of Policy Research</span>
+            </div>
           </Link>
         </div>
 
@@ -229,7 +236,7 @@ export default function Header() {
           <NavigationMenu>
             <NavigationMenuList className="gap-1">
               {navigationItems.map((item) => (
-                <NavigationMenuItem  key={item.title}>
+                <NavigationMenuItem key={item.title}>
                   {item.items && item.items.length > 0 ? (
                     <>
                       <NavigationMenuTrigger
@@ -274,7 +281,7 @@ export default function Header() {
                             {item.items.map((subItem) => (
                               <li key={subItem.title}>
                                 <DropdownLinkItem
-                                className="dark:hover:bg-[#2d394d]"
+                                  className="dark:hover:bg-[#2d394d]"
                                   title={subItem.title}
                                   href={subItem.href}
                                   isHashLink={subItem.isHashLink}
@@ -316,9 +323,10 @@ export default function Header() {
         </div>
 
         {/* Action Buttons & Mobile Menu Toggle - Right Aligned */}
-        <div className="flex-shrink-0 flex items-center gap-2">
+        <div className="flex-shrink-0 flex items-center gap-1 sm:gap-2">
           <ModeToggle
             className={cn(
+              "h-8 w-8 sm:h-9 sm:w-9",
               useTransparentHeader || !isScrolled
                 ? "bg-transparent text-white dark:text-gray-200 border-0 hover:text-white border-white/30 hover:bg-white/10 dark:hover:border-white/50 dark:hover:bg-white/10"
                 : "text-gray-700 dark:text-gray-300 bg-transparent border-0 border-gray-300 dark:bg-transparent dark:border-slate-700 hover:bg-gray-100/50 dark:hover:bg-slate-800/50"
@@ -329,7 +337,7 @@ export default function Header() {
             asChild
             size="sm"
             className={cn(
-              "font-sans text-xs sm:text-sm hidden sm:flex ", 
+              "font-sans text-xs sm:text-sm hidden sm:flex h-8 sm:h-9 px-2 sm:px-3",
               useTransparentHeader || !isScrolled
                 ? "border-white/50 bg-transparent text-white dark:text-gray-200 hover:bg-white/10 hover:border-white hover:text-white dark:hover:text-gray-50"
                 : "border-gray-300 dark:border-slate-700 text-gray-700 dark:bg-transparent dark:text-gray-300 hover:bg-gray-100/50 dark:hover:bg-slate-800/50 hover:text-gray-900 dark:hover:text-gray-100"
@@ -352,16 +360,24 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
               className={cn(
-                "hover:bg-opacity-50", // General hover opacity
+                "hover:bg-opacity-50",
                 useTransparentHeader || !isScrolled
-                  ? "text-white dark:text-gray-200 hover:bg-white/10 "
-                  : "text-white dark:text-gray-300 hover:bg-gray-200 "
+                  ? "text-white dark:text-gray-200 hover:bg-white/10"
+                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-800"
               )}
             >
               {isMobileMenuOpen ? (
-                <X className="w-6 h-6 text-white" />
+                <X className={cn("w-5 h-5 sm:w-6 sm:h-6", 
+                  useTransparentHeader || !isScrolled
+                    ? "text-white"
+                    : "text-gray-700 dark:text-gray-300"
+                )} />
               ) : (
-                <Menu className="w-6 h-6 text-white" />
+                <Menu className={cn("w-5 h-5 sm:w-6 sm:h-6",
+                  useTransparentHeader || !isScrolled
+                    ? "text-white"
+                    : "text-gray-700 dark:text-gray-300"
+                )} />
               )}
             </Button>
           </div>
@@ -370,31 +386,31 @@ export default function Header() {
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-[calc(100%+0.5rem)] left-4 right-4 rounded-xl shadow-xl border border-white/20 dark:border-slate-800/30 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md max-h-[calc(100vh-8rem)] overflow-y-auto">
-          <div className="container mx-auto py-4 px-4 flex flex-col gap-2">
+        <div className="lg:hidden absolute top-[calc(100%+0.25rem)] sm:top-[calc(100%+0.5rem)] left-2 right-2 sm:left-4 sm:right-4 rounded-xl shadow-xl border border-white/20 dark:border-slate-800/30 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md max-h-[calc(100vh-6rem)] sm:max-h-[calc(100vh-8rem)] overflow-y-auto">
+          <div className="container mx-auto py-3 sm:py-4 px-3 sm:px-4 flex flex-col gap-2">
             {navigationItems.map((item) => (
               <Fragment key={item.title}>
                 {item.items && item.items.length > 0 ? (
                   <div>
                     <button
-                      className="flex justify-between items-center w-full py-3 font-sora text-md text-gray-800 dark:text-gray-200 hover:text-brand-orange dark:hover:text-brand-orange"
+                      className="flex justify-between items-center w-full py-2.5 sm:py-3 font-sora text-sm sm:text-md text-gray-800 dark:text-gray-200 hover:text-brand-orange dark:hover:text-brand-orange"
                       onClick={() => toggleMobileSubmenu(item.title)}
                     >
                       <span>{item.title}</span>
                       <ChevronDown
                         className={cn(
-                          "w-5 h-5 transition-transform",
+                          "w-4 h-4 sm:w-5 sm:h-5 transition-transform",
                           openMobileSubmenu === item.title && "rotate-180"
                         )}
                       />
                     </button>
                     {openMobileSubmenu === item.title && (
-                      <div className="pl-4 pt-2 pb-2 border-l border-gray-200 dark:border-slate-700 ml-2 space-y-1">
+                      <div className="pl-3 sm:pl-4 pt-2 pb-2 border-l border-gray-200 dark:border-slate-700 ml-1 sm:ml-2 space-y-1">
                         {item.items.map((subItem) => (
                           <Link
                             key={subItem.title}
                             href={subItem.href}
-                            className="flex justify-between items-center py-2.5 font-sans text-gray-700 dark:text-gray-300 hover:text-brand-orange dark:hover:text-brand-orange"
+                            className="flex justify-between items-center py-2 sm:py-2.5 font-sans text-sm text-gray-700 dark:text-gray-300 hover:text-brand-orange dark:hover:text-brand-orange"
                             onClick={() =>
                               handleNavLinkClick(
                                 subItem.href,
@@ -413,7 +429,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href || "#"}
-                    className="flex justify-between items-center py-3 font-sora text-md text-gray-800 dark:text-gray-200 hover:text-brand-orange dark:hover:text-brand-orange"
+                    className="flex justify-between items-center py-2.5 sm:py-3 font-sora text-sm sm:text-md text-gray-800 dark:text-gray-200 hover:text-brand-orange dark:hover:text-brand-orange"
                     onClick={() =>
                       handleNavLinkClick(
                         item.href || "#",
@@ -428,11 +444,11 @@ export default function Header() {
                 )}
               </Fragment>
             ))}
-            <div className="pt-4 mt-4 border-t border-gray-200 dark:border-slate-700 space-y-2">
+            <div className="pt-3 sm:pt-4 mt-3 sm:mt-4 border-t border-gray-200 dark:border-slate-700 space-y-2">
               <Button
                 variant="outline"
                 asChild
-                className="w-full font-sans text-sm dark:border-slate-700 hover:bg-gray-100/50 dark:hover:bg-slate-800/50 dark:hover:text-gray-100"
+                className="w-full font-sans text-sm h-10 dark:border-slate-700 hover:bg-gray-100/50 dark:hover:bg-slate-800/50 dark:hover:text-gray-100"
               >
                 <Link href="/login" onClick={() => setIsMobileMenuOpen(false)}>
                   Login

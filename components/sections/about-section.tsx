@@ -1,6 +1,6 @@
 // Placeholder for About Section
-import Image from "next/image"
-import { Target } from "lucide-react" // Removed Eye icon as Vision is removed
+import Image from "next/image";
+import { Target } from "lucide-react"; // Removed Eye icon as Vision is removed
 
 export default function AboutSection() {
   return (
@@ -16,16 +16,22 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
           <div className="space-y-6">
             <p className="font-sans text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              Neeti Varta Institute of Policy Research Pvt. Ltd. is a pioneering social enterprise dedicated to
-              enhancing policy literacy and civic engagement, particularly in Tier 2 and Tier 3 cities of India.
+              Neeti Varta Institute of Policy Research Pvt Ltd bridges critical
+              gaps in policy literacy, skill development, and governance access.
             </p>
             <p className="font-sans text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              We aim to democratize policy knowledge, enabling individuals to understand public policy, engage in the
-              democratic process, and influence positive societal change.
+              We foster inclusive growth in Tier-2, Tier-3 cities, and rural
+              areas by empowering youth with comprehensive knowledge and
+              practical skills in policy understanding and implementation.
             </p>
+
             <p className="font-sans text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              Our core mission is to empower citizens, with a strong focus on making policy education accessible through
-              cutting-edge technology, educational resources, and community-driven initiatives.
+              Through our innovative approach, we enhance citizen access to
+              public schemes, create meaningful career pathways in policy
+              research and governance, and drive sustainable local development.
+              Our unique blend of training programs, professional certification,
+              and community support ensures lasting impact and transformative
+              change in communities across India.
             </p>
           </div>
           <div className="relative h-96">
@@ -46,12 +52,16 @@ export default function AboutSection() {
               <div className="p-3 rounded-md bg-brand-blue/10 text-brand-blue dark:bg-blue-500/20 dark:text-blue-400">
                 <Target className="w-8 h-8" />
               </div>
-              <h3 className="font-sora text-2xl text-brand-blue dark:text-blue-400">Our Mission</h3>
+              <h3 className="font-sora text-2xl text-brand-blue dark:text-blue-400">
+                Our Mission
+              </h3>
             </div>
             <div className="flex-grow">
               <p className="font-sans text-gray-700 dark:text-gray-300 leading-relaxed text-xl">
-                To empower individuals, particularly in Tier 2 and Tier 3 cities, with the knowledge and skills
-                necessary to understand and influence public policy, and become active and informed citizens.
+                To empower individuals, particularly in Tier 2 and Tier 3
+                cities, with the knowledge and skills necessary to understand
+                and influence public policy, and become active and informed
+                citizens.
               </p>
             </div>
           </div>
@@ -71,5 +81,5 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

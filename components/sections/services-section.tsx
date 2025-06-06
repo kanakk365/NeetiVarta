@@ -17,37 +17,34 @@ interface Service {
 
 const services: Service[] = [
   {
-    icon: Sparkles, // Slightly smaller icon
-    title: "Neeti Kaushal: Capacity Building & Skill Development",
+    icon: Sparkles,
+    title: "Neeti Kaushal",
     description:
-      "An all-encompassing learning platform blending theory with hands-on skills to make policy education accessible and engaging.",
+      "A structured program that builds policy literacy, professional skills, and career opportunities in public policy.",
     details:
-      "Provides a platform for young scholars to engage in rigorous research, critical thinking, and evidence-based policy analysis, addressing real-world challenges.",
+      "Youth are trained, certified, and placed as citizen consultants, helping communities navigate government schemes and digital platforms.",
     courses: [
-      { name: "Policy Research Cum Training Programme", href: "/courses/policy-research-training" },
-      { name: "Social Policy Lab (Work-Based Learning)", href: "/courses/social-policy-lab" },
+      { name: "Policy Literacy Training", href: "/courses/policy-literacy" },
+      { name: "Professional Skills Development", href: "/courses/professional-skills" },
+      { name: "Citizen Consultant Certification", href: "/courses/consultant-certification" },
     ],
-    cta: { href: "/programs/neeti-kaushal", text: "Explore Neeti Kaushal" },
+    cta: { href: "/programs/neeti-kaushal", text: "Join Neeti Kaushal" },
     themeColor: "brand-blue",
   },
   {
-    icon: Newspaper,
-    title: "Neeti Samvad (Magazine)",
-    description:
-      "Our magazine provides essential information on government schemes, objectives, eligibility, required documents, and video guides for form filling.",
-    details: "Beneficial for UPSC aspirants and citizens alike, simplifying access to crucial government information.",
-    cta: { href: "/magazine/neeti-samvad", text: "Read Neeti Samvad" },
-    themeColor: "brand-orange",
-  },
-  {
     icon: MessagesSquare,
-    title: "Neeti Insight (Policy Dialogue Platform)",
+    title: "Neeti Sahayak Kendra (NSK)",
     description:
-      "A dynamic platform under Neeti Samvad for engaging discussions, knowledge-sharing, and policy dialogues.",
+      "Grassroots facilitation centers staffed by Neeti Kaushal fellows, offering hands-on support for scheme enrollment, document preparation, and digital service access.",
     details:
-      "Brings together experts, practitioners, and enthusiasts to explore critical policy issues, fostering deeper understanding and empowering societal contribution.",
-    cta: { href: "/insights/neeti-insight", text: "Join The Dialogue" },
-    themeColor: "green-600",
+      "These centers ensure citizens can easily understand, access, and benefit from government programs, promoting inclusive and sustainable development at the community level.",
+    courses: [
+      { name: "Government Scheme Enrollment", href: "/services/scheme-enrollment" },
+      { name: "Document Preparation Support", href: "/services/document-prep" },
+      { name: "Digital Services Access", href: "/services/digital-access" },
+    ],
+    cta: { href: "/centers/neeti-sahayak-kendra", text: "Find NSK Center" },
+    themeColor: "brand-orange",
   },
 ]
 
@@ -69,11 +66,11 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-sora text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-            Our Core Offerings
+            Our Core Solutions
           </h2>
           <div className="w-24 h-1 bg-brand-orange mx-auto"></div>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 gap-8 mb-20 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <Card
               key={index}
