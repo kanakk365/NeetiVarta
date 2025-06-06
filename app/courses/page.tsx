@@ -59,15 +59,15 @@ export default function CoursesPage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="flex-1 pt-20 bg-gray-50 dark:bg-slate-800">
+      <main id="main-content" className="flex-1 bg-white dark:bg-slate-900">
         {/* Page Header Section */}
-        <section className="py-12 lg:py-16 bg-slate-100 dark:bg-slate-800">
+        <section className="pt-32 pb-12 lg:pb-16 bg-gradient-to-br from-brand-blue via-slate-800 to-slate-900 text-white dark:from-brand-blue/90 dark:via-slate-900 dark:to-black">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <BookOpen className="w-16 h-16 text-brand-blue dark:text-blue-400 mx-auto mb-6" />
-            <h1 className="font-sora text-4xl sm:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+            <BookOpen className="w-16 h-16 text-white mb-6 mx-auto" />
+            <h1 className="font-sora text-4xl sm:text-5xl font-bold text-white mb-4">
               Our Courses
             </h1>
-            <p className="font-sans text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="font-sans text-lg text-gray-200 dark:text-gray-300 max-w-2xl mx-auto">
               Explore our range of courses designed to equip you with the knowledge and skills for a successful career
               in public policy.
             </p>

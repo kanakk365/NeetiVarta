@@ -184,16 +184,16 @@ export default function WebinarsPage() {
       <Header />
       <main
         id="main-content"
-        className="flex-1 pt-20 bg-gray-50 dark:bg-slate-800"
+        className="flex-1 bg-white dark:bg-slate-900"
       >
         {/* Page Header Section */}
-        <section className="py-12 lg:py-16 bg-slate-100 dark:bg-slate-800">
+        <section className="pt-32 pb-12 lg:pb-16 bg-gradient-to-br from-brand-orange via-slate-800 to-brand-blue text-white dark:from-brand-orange/90 dark:via-slate-900 dark:to-brand-blue/90">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <Presentation className="w-16 h-16 text-brand-orange dark:text-orange-400 mx-auto mb-6" />
-            <h1 className="font-sora text-4xl sm:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+            <Presentation className="w-16 h-16 text-white mx-auto mb-6" />
+            <h1 className="font-sora text-4xl sm:text-5xl font-bold text-white mb-4">
               Webinars
             </h1>
-            <p className="font-sans text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="font-sans text-lg text-gray-200 dark:text-gray-300 max-w-2xl mx-auto">
               Join our insightful webinars to learn from experts, discuss
               critical policy issues, and expand your knowledge.
             </p>
