@@ -28,7 +28,7 @@ const services: Service[] = [
       { name: "Professional Skills Development", href: "/courses/professional-skills" },
       { name: "Citizen Consultant Certification", href: "/courses/consultant-certification" },
     ],
-    cta: { href: "/programs/neeti-kaushal", text: "Join Neeti Kaushal" },
+    cta: { href: "/neeti-kaushal", text: "Join Neeti Kaushal" },
     themeColor: "brand-blue",
   },
   {
@@ -43,7 +43,7 @@ const services: Service[] = [
       { name: "Document Preparation Support", href: "/services/document-prep" },
       { name: "Digital Services Access", href: "/services/digital-access" },
     ],
-    cta: { href: "/centers/neeti-sahayak-kendra", text: "Find NSK Center" },
+    cta: { href: "/neeti-sahayak", text: "Find NSK Center" },
     themeColor: "brand-orange",
   },
 ]

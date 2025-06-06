@@ -1,37 +1,15 @@
 import React from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import Link from "next/link"
-import { BadgeIndianRupee, TrendingUp, ClipboardCheck } from "lucide-react"
+import { CheckCircle2, Zap } from "lucide-react"
 
-const courseDetails = [
-  { text: "Duration: 1 week, 5 sessions" },
-  { text: "Fee: Just ₹599!", isHighlighted: true, highlightColor: "text-brand-orange" },
-  { text: "Platform: Online via Google Meet" },
-  { text: "Certificate & Hands-On Experience: Included!" },
-  { text: "Discount: Up to 20% on advanced courses!" },
-  {
-    text: "Target Audience: Beginners seeking a career in the developmental sector, especially from Tier 2, Tier 3, and rural areas of India.",
-    isLongText: true,
-  },
-]
-
-const whyEnroll = [
-  {
-    title: "Affordable & Accessible:",
-    description: "Quality education at just ₹599.",
-    icon: <BadgeIndianRupee className="w-5 h-5" />,
-  },
-  {
-    title: "Career Growth:",
-    description: "Step into the world of public policy and make a difference.",
-    icon: <TrendingUp className="w-5 h-5" />,
-  },
-  {
-    title: "Practical Experience:",
-    description: "Gain hands-on skills and certification.",
-    icon: <ClipboardCheck className="w-5 h-5" />,
-  },
+const annualMembershipBenefits = [
+  "Exclusive courses and 5% Discounts on Training Programs",
+  "Exclusive Access to Research Reports, and blogs",
+  "Regular Webinars, Workshops, and Exclusive Newsletter or Journal",
+  "Networking Events, and Monthly Q&A Sessions with Experts",
 ]
 
 export default function EventsSection() {
@@ -40,105 +18,67 @@ export default function EventsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-sora text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-            Unlock Your Future in Public Policy!
+            Unlock Exclusive Access
           </h2>
-          <div className="w-24 h-1 bg-brand-orange mx-auto"></div>
+          <div className="w-24 h-1 bg-brand-orange mx-auto mb-4"></div>
+          <p className="font-sans text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Join our community of policy enthusiasts, researchers, and professionals. Our annual membership offers a
+            comprehensive package designed to support your growth and engagement in the public policy domain.
+          </p>
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl overflow-hidden border border-gray-200 dark:border-slate-700">
-            <div className="lg:flex">
-              {/* Image Section */}
-              <div className="lg:w-1/2">
-                <Image
-                  src="/policy-workshop-diverse.png"
-                  alt="Professional policy training workshop with diverse participants"
-                  width={1080}
-                  height={1080}
-                  className="w-full h-64 lg:h-full object-cover"
-                />
-              </div>
+          <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="order-2 md:order-1">
+              <h3 className="font-sora text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-6">
+                Membership Benefits:
+              </h3>
+              <ul className="space-y-4">
+                {annualMembershipBenefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle2 className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 mt-1 flex-shrink-0" />
+                    <span className="font-sans text-gray-700 dark:text-gray-300">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-              {/* Content Section */}
-              <div className="lg:w-1/2 p-8 lg:p-12">
-                <div className="space-y-6">
-                  {/* Course Title */}
-                  <h3 className="font-sora text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
-                    Public Policy Unveiled: Understanding, Essential Skills, and Career Opportunities
-                  </h3>
-
-                  {/* Course Details */}
-                  <div className="space-y-3">
-                    {courseDetails.map((item, index) => (
-                      <div
-                        key={index}
-                        className={`flex items-start space-x-3 ${item.isLongText ? "" : "items-center"}`}
-                      >
-                        <div
-                          className={`w-2 h-2 bg-brand-orange rounded-full ${item.isLongText ? "mt-1.5" : "mt-0"} flex-shrink-0`}
-                        ></div>
-                        <span
-                          className={`font-sans text-gray-700 dark:text-gray-300 ${
-                            item.isHighlighted ? `font-semibold ${item.highlightColor} dark:text-orange-400` : ""
-                          }`}
-                        >
-                          {item.text}
-                        </span>
-                      </div>
-                    ))}
+            <div className="order-1 md:order-2">
+              <Card className="bg-white dark:bg-slate-800 shadow-xl border border-brand-orange dark:border-orange-500 transform hover:scale-105 transition-transform duration-300">
+                <CardHeader className="text-center p-6 pb-4">
+                  <CardTitle className="font-sora text-2xl font-bold text-brand-orange dark:text-orange-400">
+                    Yearly Plan
+                  </CardTitle>
+                  <p className="font-sans text-sm text-gray-500 dark:text-gray-400">Recommended</p>
+                </CardHeader>
+                <CardContent className="text-center p-6 pt-0">
+                  <div className="my-4">
+                    <span className="font-sora text-5xl font-bold text-gray-900 dark:text-gray-100">₹500</span>
+                    <span className="font-sans text-gray-500 dark:text-gray-400">/year</span>
                   </div>
-
-                  {/* Why Enroll Section */}
-                  <div className="border-t border-gray-200 dark:border-slate-700 pt-6 mt-6">
-                    <h4 className="font-sora text-xl font-semibold text-gray-900 dark:text-gray-100 mb-5">
-                      Why Enroll?
-                    </h4>
-                    <div className="space-y-3">
-                      {whyEnroll.map((item, index) => (
-                        <div
-                          key={index}
-                          className="flex items-start space-x-3 p-2 rounded-md transition-colors hover:bg-gray-100 dark:hover:bg-slate-800"
-                        >
-                          <div className="flex-shrink-0 mt-0.5 text-brand-blue dark:text-blue-400">
-                            {React.cloneElement(item.icon, { className: "w-5 h-5" })}
-                          </div>
-                          <div>
-                            <span className="font-sans font-semibold text-gray-900 dark:text-gray-100">
-                              {item.title}
-                            </span>
-                            <span className="font-sans text-gray-700 dark:text-gray-300"> {item.description}</span>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                    <Button
-                      asChild
-                      size="lg"
-                      className="font-sans bg-brand-orange hover:bg-brand-orange/90 text-white text-center font-semibold transition-all duration-300 transform hover:scale-105 flex-1 px-6 py-3"
-                    >
-                      <Link href="https://forms.gle/f5GFNeciKFmjj2T48" target="_blank" rel="noopener noreferrer">
-                        Join Now
-                      </Link>
-                    </Button>
-                    <Button
-                      asChild
-                      size="lg"
-                      className="font-sans bg-brand-blue hover:bg-brand-blue/90 text-white text-center font-semibold transition-all duration-300 transform hover:scale-105 flex-1 px-6 py-3"
-                    >
-                      <Link href="https://rzp.io/rzp/JH0lagu" target="_blank" rel="noopener noreferrer">
-                        Pay Now
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
-              </div>
+                  <p className="font-sans text-sm text-gray-600 dark:text-gray-300 mb-6">
+                    Billed annually. Full access to all member benefits.
+                  </p>
+                  <Button
+                    asChild
+                    size="lg"
+                    className="w-full font-sans bg-brand-orange hover:bg-brand-orange/90 text-white text-lg"
+                  >
+                    <Link href="#">
+                      Buy Membership
+                    </Link>
+                  </Button>
+                </CardContent>
+                <CardFooter className="p-4 bg-brand-orange/10 dark:bg-orange-500/10 text-center">
+                  <p className="font-sans text-xs text-brand-orange dark:text-orange-400 mx-auto">
+                    Empower your policy journey today!
+                  </p>
+                </CardFooter>
+              </Card>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   )
