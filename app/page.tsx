@@ -7,7 +7,6 @@ import AchievementsSection from "@/components/sections/achievements-section"
 import EventsSection from "@/components/sections/events-section"
 import CollaborationsSection from "@/components/sections/collaborations-section"
 import GallerySection from "@/components/sections/gallery-section"
-import ContactSection from "@/components/sections/contact-section"
 import Footer from "@/components/layout/footer"
 
 export default function HomePage() {
@@ -25,7 +24,6 @@ export default function HomePage() {
         <EventsSection />
         <CollaborationsSection />
         <GallerySection />
-        <ContactSection />
       </main>
       <Footer />
     </>

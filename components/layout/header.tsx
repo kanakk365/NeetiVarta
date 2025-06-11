@@ -1,8 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import Link from "next/link";
-import { useState, useEffect, Fragment } from "react";
 import { Menu, X, MoveRight, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -45,7 +44,6 @@ const homePageSections: SubNavItem[] = [
   { title: "Events", href: "#events", isHashLink: true },
   { title: "Collaborations", href: "#collaborations", isHashLink: true },
   { title: "Gallery", href: "#gallery", isHashLink: true },
-  { title: "Contact", href: "#contact", isHashLink: true },
 ];
 
 const navigationItems: NavItem[] = [
@@ -77,6 +75,10 @@ const navigationItems: NavItem[] = [
       { title: "Memberships", href: "/memberships" },
     ],
     dropdownCta: { text: "View All Programs", href: "/courses" },
+  },
+  {
+    title: "Contact",
+    href: "/contact",
   },
 ];
 
@@ -186,21 +188,21 @@ export default function Header() {
   };
 
   const headerBaseTextColor =
-    useTransparentHeader || !isScrolled
+    useTransparentHeader
       ? "text-white dark:text-gray-50"
       : "text-gray-900 dark:text-gray-100";
   const navLinkBaseTextColor =
-    useTransparentHeader || !isScrolled
+    useTransparentHeader
       ? "text-white dark:text-gray-200"
       : "text-gray-700 dark:text-gray-300";
 
   const navLinkHoverFocusBg =
-    useTransparentHeader || !isScrolled
+    useTransparentHeader
       ? "hover:bg-white/10 dark:hover:bg-white/20 focus:bg-white/10 dark:focus:bg-white/20"
       : "hover:bg-gray-100/50 dark:hover:bg-slate-800/50 focus:bg-gray-100/50 dark:focus:bg-slate-800/50";
 
   const navLinkOpenBg =
-    useTransparentHeader || !isScrolled
+    useTransparentHeader
       ? "data-[state=open]:bg-white/15 dark:data-[state=open]:bg-white/25"
       : "data-[state=open]:bg-gray-100/60 dark:data-[state=open]:bg-slate-800/60";
 
@@ -210,9 +212,9 @@ export default function Header() {
         className={cn(
           "container mx-auto max-w-7xl min-h-[60px] sm:h-16 flex items-center justify-between gap-2 sm:gap-4 px-3 sm:px-4 md:px-6 lg:px-8",
           "rounded-xl transition-all duration-300 ease-in-out",
-          isScrolled
-            ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-lg border border-white/20 dark:border-slate-800/30"
-            : "bg-transparent dark:bg-transparent backdrop-blur-none shadow-none border border-transparent"
+          useTransparentHeader
+            ? "bg-transparent dark:bg-transparent backdrop-blur-none shadow-none border border-transparent"
+            : "bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-lg border border-white/20 dark:border-slate-800/30"
         )}
       >
         {/* Logo */}
@@ -328,7 +330,7 @@ export default function Header() {
           <ModeToggle
             className={cn(
               "h-8 w-8 sm:h-9 sm:w-9",
-              useTransparentHeader || !isScrolled
+              useTransparentHeader
                 ? "bg-transparent text-white dark:text-gray-200 border-0 hover:text-white border-white/30 hover:bg-white/10 dark:hover:border-white/50 dark:hover:bg-white/10"
                 : "text-gray-700 dark:text-gray-300 bg-transparent border-0 border-gray-300 dark:bg-transparent dark:border-slate-700 hover:bg-gray-100/50 dark:hover:bg-slate-800/50"
             )}
@@ -339,7 +341,7 @@ export default function Header() {
             size="sm"
             className={cn(
               "font-sans text-xs sm:text-sm hidden sm:flex h-8 sm:h-9 px-2 sm:px-3",
-              useTransparentHeader || !isScrolled
+              useTransparentHeader
                 ? "border-white/50 bg-transparent text-white dark:text-gray-200 hover:bg-white/10 hover:border-white hover:text-white dark:hover:text-gray-50"
                 : "border-gray-300 dark:border-slate-700 text-gray-700 dark:bg-transparent dark:text-gray-300 hover:bg-gray-100/50 dark:hover:bg-slate-800/50 hover:text-gray-900 dark:hover:text-gray-100"
             )}
@@ -362,20 +364,20 @@ export default function Header() {
               aria-label="Toggle menu"
               className={cn(
                 "hover:bg-opacity-50",
-                useTransparentHeader || !isScrolled
+                useTransparentHeader
                   ? "text-white dark:text-gray-200 hover:bg-white/10"
                   : "text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-800"
               )}
             >
               {isMobileMenuOpen ? (
                 <X className={cn("w-5 h-5 sm:w-6 sm:h-6", 
-                  useTransparentHeader || !isScrolled
+                  useTransparentHeader
                     ? "text-white"
                     : "text-gray-700 dark:text-gray-300"
                 )} />
               ) : (
                 <Menu className={cn("w-5 h-5 sm:w-6 sm:h-6",
-                  useTransparentHeader || !isScrolled
+                  useTransparentHeader
                     ? "text-white"
                     : "text-gray-700 dark:text-gray-300"
                 )} />
