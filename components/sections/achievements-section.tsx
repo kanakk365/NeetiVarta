@@ -17,7 +17,7 @@ interface AchievementItem {
 const achievementsData: AchievementItem[] = [
   {
     icon: BookCheck,
-    numericValue: 3,
+    numericValue: 6,
     suffix: "",
     label: "Internship Programmes Offered",
     themeColor: "text-brand-blue dark:text-blue-400",
@@ -25,7 +25,7 @@ const achievementsData: AchievementItem[] = [
   },
   {
     icon: Users,
-    numericValue: 30,
+    numericValue: 60,
     suffix: "+",
     label: "Successful Enrollments",
     themeColor: "text-brand-orange dark:text-orange-400",
@@ -33,7 +33,7 @@ const achievementsData: AchievementItem[] = [
   },
   {
     icon: Award,
-    numericValue: 3,
+    numericValue: 7,
     suffix: "",
     label: "Courses Offered",
     themeColor: "text-green-600 dark:text-green-400",

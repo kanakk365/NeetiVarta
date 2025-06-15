@@ -1,5 +1,5 @@
 import Header from "@/components/layout/header"
-import { Hero } from "@/components/ui/animated-hero" // Updated import
+import { Hero } from "@/components/ui/animated-hero"
 import AboutSection from "@/components/sections/about-section"
 import ServicesSection from "@/components/sections/services-section"
 import TestimonialsSection from "@/components/sections/testimonials-section"
@@ -14,9 +14,7 @@ export default function HomePage() {
     <>
       <Header />
       <main id="main-content" className="flex-1 relative">
-        {" "}
-        {/* Removed h-full as hero might control its own height */}
-        <Hero /> {/* Use the new Hero component */}
+        <Hero />
         <AboutSection />
         <ServicesSection />
         <TestimonialsSection />

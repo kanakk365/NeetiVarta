@@ -51,7 +51,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="font-sora text-lg font-semibold text-gray-100 dark:text-white">Resources</h3>
             <ul className="space-y-2">
-              {["Blog", "Magazine (Neeti Samvad)", "Insight", "Privacy Policy", "Terms of Use"].map((item) => (
+              {["Blog", "Insight", "Privacy Policy", "Terms of Use"].map((item) => (
                 <li key={item}>
                   <Link
                     href="#"

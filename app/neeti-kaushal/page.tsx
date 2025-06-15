@@ -60,6 +60,7 @@ const coreComponents = [
       "Digital literacy enhancement",
     ],
   },
+  
   {
     icon: Award,
     title: "Policy Research Fellowship cum Training Program",
@@ -71,6 +72,20 @@ const coreComponents = [
       "Specialized referral programs",
       "Research methodology training",
       "Professional certification pathway",
+    ],
+  },
+  {
+    icon: BookOpen,
+    title: "Policy Research Internship cum Training Program",
+    description:
+      "This one-month training and internship programme combines theoretical insights with hands-on policy analysis. Participants develop critical research skills and gain exposure to real-world governance challenges.",
+    color: "text-green-600 dark:text-green-400",
+    highlights: [
+      "Expert Mentorship: Guidance from experienced policy analysts and scholars",
+      "Hands-On Experience: Work on real-world policy challenges and research projects",
+      "Interactive Learning: Participate in discussions, case studies, and policy drafting exercises",
+      "Flexible Duration: Opportunity to extend the program beyond one month based on research requirements",
+      "Certification & Alumni Membership: Upon completion, interns receive a certificate and become part of the Neeti Varta Alumni Network for one year",
     ],
   },
 ];
@@ -147,13 +162,13 @@ export default function NeetiKaushalPage() {
                 Neeti Kaushal comprises two essential components designed to
                 build comprehensive policy expertise
               </p>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-8">
+            </div>            <div className="grid lg:grid-cols-2 gap-8">
               {coreComponents.map((component, index) => (
                 <Card
                   key={index}
-                  className="bg-white dark:bg-slate-900 hover:shadow-xl transition-shadow duration-300"
+                  className={`bg-white dark:bg-slate-900 hover:shadow-xl transition-shadow duration-300 ${
+                    index === 2 ? 'lg:col-span-2 lg:max-w-2xl lg:mx-auto' : ''
+                  }`}
                 >
                   <CardHeader className="pb-4">
                     <div className="flex items-center space-x-4 mb-4">
