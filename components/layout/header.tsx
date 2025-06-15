@@ -71,7 +71,7 @@ const navigationItems: NavItem[] = [
       "Explore our diverse range of educational and engagement programs.",
     items: [
       { title: "Courses", href: "/courses" },
-      { title: "Webinars", href: "/webinars" },
+      { title: "Events", href: "/events" },
       { title: "Memberships", href: "/memberships" },
     ],
     dropdownCta: { text: "View All Programs", href: "/courses" },

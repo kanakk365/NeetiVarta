@@ -33,16 +33,6 @@ const coursesData: Course[] = [
     enrollLink: "#", // Replace with actual link
     additionalNotes: "Flexible pricing plans available.",
   },
-  {
-    id: "ipp-002",
-    title: "Introduction to Public Policy: A Foundational Course",
-    coverImageUrl: "/course-intro-public-policy.png",
-    institute: "Neeti Varta Institute of Policy Research",
-    originalPrice: 10000,
-    discountedPrice: 5000,
-    tags: ["Foundational", "Governance", "Policy Making"],
-    enrollLink: "#", // Replace with actual link
-  },
   // Add more courses here if needed
 ]
 
