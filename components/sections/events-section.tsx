@@ -83,7 +83,7 @@ export default function EventsSection() {
           </div>
 
           <h2 className="font-sora text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6 leading-tight">
-            Policy Research Training &<br />
+            Policy Research Training cum<br />
             <span className="text-brand-orange dark:text-orange-400">
               Internship Programme
             </span>

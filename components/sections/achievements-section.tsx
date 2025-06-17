@@ -27,7 +27,7 @@ const achievementsData: AchievementItem[] = [
     icon: Users,
     numericValue: 60,
     suffix: "+",
-    label: "Successful Enrollments",
+    label: "Successful Completions",
     themeColor: "text-brand-orange dark:text-orange-400",
     iconBgColor: "bg-orange-100 dark:bg-orange-500/20",
   },
@@ -63,7 +63,7 @@ export default function AchievementsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-sora text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-            Our Milestones
+            Our Achievements
           </h2>
           <p className="font-sans text-xl text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
             Celebrating our progress in democratizing policy knowledge and

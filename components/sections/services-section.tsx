@@ -66,7 +66,7 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-sora text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-            Our Core Projects
+            Our Core Offerings
           </h2>
           <div className="w-24 h-1 bg-brand-orange mx-auto"></div>
         </div>
