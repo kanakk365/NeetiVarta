@@ -1,6 +1,6 @@
 // Placeholder for About Section
 import Image from "next/image";
-import { Target } from "lucide-react"; // Removed Eye icon as Vision is removed
+import { Target, Eye } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -50,6 +50,14 @@ export default function AboutSection() {
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-6">
+            <div className="flex flex-row items-center space-x-4 pb-4">
+              <div className="p-3 rounded-md bg-brand-orange/10 text-brand-orange dark:bg-orange-500/20 dark:text-orange-400">
+                <Eye className="w-8 h-8" />
+              </div>
+              <h3 className="font-sora text-2xl text-brand-orange dark:text-orange-400">
+                Our Vision
+              </h3>
+            </div>
             <p className="font-sans text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               Neeti Varta Institute of Policy Research Pvt Ltd bridges critical
               gaps in policy literacy, skill development, and governance access.
