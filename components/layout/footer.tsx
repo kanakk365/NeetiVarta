@@ -35,6 +35,7 @@ export default function Footer() {
                 "Events",
                 "Collaborations",
                 "Gallery",
+                "Careers",
                 "Contact",
               ].map((item) => (
                 <li key={item}>
