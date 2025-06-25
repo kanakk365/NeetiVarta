@@ -21,18 +21,18 @@ export default function CollaborationsSection() {
             engagement.
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center justify-items-center">
           {partnerLogos.map((logo, index) => (
             <div
               key={index}
-              className="bg-gray-50 dark:bg-slate-800 rounded-lg p-6 border border-gray-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              className="bg-gray-50 dark:bg-slate-800 rounded-lg p-8 border border-gray-200 dark:border-slate-700 hover:shadow-lg transition-all duration-300 transform hover:scale-105 w-full max-w-sm"
             >
               <Image
                 src={logo.src || "/placeholder.svg"}
                 alt={logo.alt}
-                width={200}
-                height={175}
-                className="w-full h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                width={300}
+                height={200}
+                className="w-full h-60 object-contain grayscale hover:grayscale-0 transition-all duration-300"
               />
             </div>
           ))}
