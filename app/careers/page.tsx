@@ -43,6 +43,30 @@ const jobOpenings = [
     ],
     applyEmail: "neetivarta.learning@gmail.com",
   },
+  {
+    id: "2",
+    title: "Neeti Kaushal Internship Programme!",
+    department: "Training & Development",
+    type: "Contract/Part-time",
+    location: "Work from Home",
+    deadline: "30 June 2025",
+    isActive: true,
+    featured: true,
+    description:
+      "Are you passionate about public policy? Do you want to sharpen your skills and contribute to meaningful change? Join the Neeti Varta Institute of Policy Research Pvt. Ltd. as a Policy Trainee under our prestigious Neeti Kaushal Programme.",
+    requirements: [
+      "Policy Experts, Academics & Governance Professionals",
+      "Social Impact Leaders & Researchers",
+      "Innovators in Policy Analysis & Implementation",
+    ],
+    benefits: [
+      "Real-world policy research experience",
+      "One-on-one mentoring",
+      "Career guidance sessions ",
+      "Certificate & Letter of Recommendation",
+    ],
+    applyEmail: "neetivarta.learning@gmail.com",
+  },
 ];
 
 export default function CareersPage() {

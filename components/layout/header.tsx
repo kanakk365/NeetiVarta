@@ -230,7 +230,7 @@ export default function Header() {
           >
             <div className="flex flex-col text-center leading-tight">
               <div className="text-bas sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight">Neeti Varta</div>
-              <span className="text-[8px] sm:text-sm font-normal leading-tight opacity-90">Institute of Policy Research</span>
+              <span className="text-[8px] sm:text-sm font-normal leading-tight opacity-90">Institute of Policy Research Pvt. Ltd.</span>
             </div>
           </Link>
         </div>

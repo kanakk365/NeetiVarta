@@ -240,7 +240,7 @@ export default function EventsSection() {
                     </Link>
                   </Button>
 
-                  <Button
+                  {/* <Button
                     asChild
                     variant="outline"
                     size="lg"
@@ -249,7 +249,7 @@ export default function EventsSection() {
                     <Link href="https://rzp.io/rzp/VlQrmg7" target="_blank">
                       Make Payment
                     </Link>
-                  </Button>
+                  </Button> */}
                 </div>
               </CardContent>
 

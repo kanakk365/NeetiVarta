@@ -67,6 +67,12 @@ const testimonials = [
     name: "Sneha Yadav",
     role: "September Batch, 2023",
   },
+   {
+    text: "Interning with the Social Policy Lab at the Neeti Varta Institute of Policy Research was a hands-on experience that bridged policy theory and real-world application. Evaluating a government scheme in Chhattisgarh, I gained skills in stakeholder mapping, data analysis, and impact assessment using tools like the Evaluation Matrix and Theory of Change. This experience sharpened my research abilities and gave me a deeper understanding of governance, laying a strong foundation for a career in public policy and development.",
+    image:"/vanshika.jpg",
+    name: "Vanshikha Tyagi",
+    role: "September Batch, 2023",
+  },
 ];
 
 const firstColumn = testimonials.slice(0, 3);

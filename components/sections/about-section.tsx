@@ -27,9 +27,10 @@ export default function AboutSection() {
               gaps in policy literacy, skill development, and governance access.
             </p>
             <p className="font-sans text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              We foster inclusive growth in Tier-2, Tier-3 cities, and rural
+              {/* We foster inclusive growth in Tier-2, Tier-3 cities, and rural
               areas by empowering youth with comprehensive knowledge and
-              practical skills in policy understanding and implementation.
+              practical skills in policy understanding and implementation. */}
+              We envision an inclusive democracy where everyone can understand, access, and influence public policy. By scaling Neeti Kaushal and NSKs nationwide, we aim to build a network of Citizen Consultants driving grassroots impact, civic engagement, and sustainable careers in public policy.
             </p>
 
             <p className="font-sans text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -64,10 +65,11 @@ export default function AboutSection() {
             </div>
             <div className="flex-grow">
               <p className="font-sans text-gray-700 dark:text-gray-300 leading-relaxed text-xl">
-                To empower individuals, particularly in Tier 2 and Tier 3
-                cities, with the knowledge and skills necessary to understand
+                {/* To empower individuals, particularly in Tier 2 and Tier 3
+                cities of India, with the knowledge and skills necessary to understand
                 and influence public policy, and become active and informed
-                citizens.
+                citizens. */}
+                Neeti Kaushal equips individuals from Tier-2 and Tier-3 cities of India and rural India with policy literacy, digital skills, and career pathways, transforming them into Citizen Consultants who support their communities. Through Neeti Sahayak Kendras (NSKs), these trained fellows provide localized guidance, ease access to government schemes, and bridge governance gaps.
               </p>
             </div>
           </div>
