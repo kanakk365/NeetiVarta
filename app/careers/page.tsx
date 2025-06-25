@@ -65,7 +65,31 @@ const jobOpenings = [
       "Career guidance sessions ",
       "Certificate & Letter of Recommendation",
     ],
-    applyEmail: "neetivarta.learning@gmail.com",
+    applyEmail: "https://forms.gle/UTeTiouaUEVV5gNZ7",
+  },
+  {
+    id: "3",
+    title: "Policy Research Training Cum Fellowship Programme",
+    department: "Training & Development",
+    type: "Contract/Part-time",
+    location: "Work from Home",
+    deadline: "30 June 2025",
+    isActive: true,
+    featured: true,
+    description:
+      "Are you passionate about public policy, governance, and research? Looking for hands-on experience and expert mentorship in policy analysis? .",
+    requirements: [
+      "Open to Undergraduate (UG), Postgraduate (PG), and PhD scholars. ",
+      "Priority given to UG, PG, and PhD candidates based on merit and research interest. ",
+      "Female candidates are strongly encouraged to apply.",
+    ],
+    benefits: [
+      "Real-world policy research experience",
+      "One-on-one mentoring",
+      "Career guidance sessions ",
+      "Certificate & Letter of Recommendation",
+    ],
+    applyEmail: "https://forms.gle/Vyt4fxnxZNUsx5re7",
   },
 ];
 
@@ -217,7 +241,7 @@ export default function CareersPage() {
                           className="bg-brand-blue hover:bg-brand-blue/90 text-white"
                         >
                           <Link
-                            href={`mailto:${job.applyEmail}?subject=Application for ${job.title}`}
+                            href={`${job.applyEmail}`}
                           >
                             <Mail className="w-4 h-4 mr-2" />
                             Apply Now
