@@ -2,12 +2,9 @@
 import Image from "next/image"
 
 const partnerLogos = [
-  { src: "/placeholder.svg?width=200&height=100", alt: "Partner 1" },
-  { src: "/placeholder.svg?width=200&height=100", alt: "Partner 2" },
-  { src: "/placeholder.svg?width=200&height=100", alt: "Partner 3" },
-  { src: "/placeholder.svg?width=200&height=100", alt: "Partner 4" },
-  { src: "/placeholder.svg?width=200&height=100", alt: "Partner 5" },
-  { src: "/placeholder.svg?width=200&height=100", alt: "Partner 6" },
+  { src: "/collaboration1.png", alt: "Partner 1" },
+  { src: "/collaboration2.jpg", alt: "Partner 2" },
+  { src: "/collaboration3.jpg", alt: "Partner 3" }
 ]
 
 export default function CollaborationsSection() {
@@ -33,8 +30,8 @@ export default function CollaborationsSection() {
               <Image
                 src={logo.src || "/placeholder.svg"}
                 alt={logo.alt}
-                width={150}
-                height={75}
+                width={200}
+                height={175}
                 className="w-full h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300"
               />
             </div>

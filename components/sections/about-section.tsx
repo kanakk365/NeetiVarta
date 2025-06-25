@@ -75,7 +75,7 @@ export default function AboutSection() {
           <div className="rounded-lg overflow-hidden shadow-xl h-full">
             <div className="aspect-video">
               <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace dQw4w9WgXcQ with your actual YouTube video ID
+                src="https://www.youtube.com/embed/KZC3hZRJeqU" // Replace dQw4w9WgXcQ with your actual YouTube video ID
                 title="Our Mission in Action - YouTube Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
