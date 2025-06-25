@@ -62,6 +62,7 @@ const navigationItems: NavItem[] = [
       { title: "About Us", href: "/about" },
       { title: "Neeti Kaushal", href: "/neeti-kaushal" },
       { title: "Neeti Sahayak", href: "/neeti-sahayak" },
+      { title: "Careers", href: "/careers" },
     ],
     dropdownCta: { text: "Discover Our Story", href: "/about" },
   },
