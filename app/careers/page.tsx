@@ -85,7 +85,8 @@ export default function CareersPage() {
   return (
     <>
       <Header />
-      <main id="main-content" className="flex-1">        {/* Hero Section */}
+      <main id="main-content" className="flex-1">
+        {/* Hero Section */}
         <section className="relative pt-32 pb-20 lg:pb-32 bg-gradient-to-br from-brand-blue via-slate-800 to-slate-900 text-white dark:from-brand-blue/90 dark:via-slate-900 dark:to-black">
           <div className="absolute inset-0">
             <Image
@@ -110,122 +111,126 @@ export default function CareersPage() {
           </div>
         </section>
 
-        {/* Featured Job Opening */}
-        {featuredJob && (
-          <section className="py-16 lg:py-24 bg-white dark:bg-slate-900">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-12">
-                <Badge
-                  variant="secondary"
-                  className="mb-4 bg-brand-orange text-white"
-                >
-                  <Rocket className="w-4 h-4 mr-2" />
-                  Featured Opening
-                </Badge>
-                <h2 className="font-sora text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-                  Current Opportunities
-                </h2>
-              </div>
-
-              <Card className="overflow-hidden shadow-2xl border-2 border-brand-orange dark:border-orange-500 bg-gradient-to-r from-orange-50 to-yellow-50 dark:from-slate-800 dark:to-slate-700">
-                <CardHeader className="bg-brand-orange text-white p-8">
-                  <div className="flex items-center justify-between flex-wrap gap-4">
-                    <div>
-                      <CardTitle className="font-sora text-2xl lg:text-3xl font-bold mb-2 flex items-center">
-                        <Rocket className="w-8 h-8 mr-3" />
-                        {featuredJob.title}
-                      </CardTitle>
-                      <div className="flex flex-wrap gap-4 text-orange-100">
-                        <span className="flex items-center gap-1">
-                          <Users className="w-4 h-4" />
-                          {featuredJob.department}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Briefcase className="w-4 h-4" />
-                          {featuredJob.type}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <CalendarDays className="w-4 h-4" />
-                          Deadline: {formatDate(featuredJob.deadline)}
-                        </span>
-                      </div>
-                    </div>
-                    <Badge
-                      variant="secondary"
-                      className="bg-white text-brand-orange font-semibold"
-                    >
-                      Apply Now
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent className="p-8">
-                  <div className="grid lg:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="font-sora text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
-                        <Target className="w-5 h-5 mr-2 text-brand-orange" />
-                        Who We're Looking For:
-                      </h3>
-                      <ul className="space-y-3 mb-6">
-                        {featuredJob.requirements.map((req, index) => (
-                          <li key={index} className="flex items-start">
-                            <CheckCircle2 className="w-5 h-5 text-green-500 dark:text-green-400 mr-3 mt-1 flex-shrink-0" />
-                            <span className="font-sans text-gray-700 dark:text-gray-300">
-                              {req}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h3 className="font-sora text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
-                        <Heart className="w-5 h-5 mr-2 text-brand-orange" />
-                        Why Join Us?
-                      </h3>
-                      <ul className="space-y-3 mb-6">
-                        {featuredJob.benefits.map((benefit, index) => (
-                          <li key={index} className="flex items-start">
-                            <CheckCircle2 className="w-5 h-5 text-green-500 dark:text-green-400 mr-3 mt-1 flex-shrink-0" />
-                            <span className="font-sans text-gray-700 dark:text-gray-300">
-                              {benefit}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="bg-gray-50 dark:bg-slate-700 p-6 rounded-lg mt-6">
-                    <p className="font-sans text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                      {featuredJob.description}
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
-                      <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                        <CalendarDays className="w-4 h-4" />
-                        <span>
-                          Application Deadline:{" "}
-                          <strong>{formatDate(featuredJob.deadline)}</strong>
-                        </span>
-                      </div>
-                      <Button
-                        asChild
-                        size="lg"
-                        className="bg-brand-orange hover:bg-brand-orange/90 text-white"
-                      >
-                        <Link
-                          href={`mailto:${featuredJob.applyEmail}?subject=Application for ${featuredJob.title}`}
-                        >
-                          <Mail className="w-4 h-4 mr-2" />
-                          Apply Now
-                        </Link>
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+        {/* All Job Openings */}
+        <section className="py-16 lg:py-24 bg-white dark:bg-slate-900">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="font-sora text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                Current Opportunities
+              </h2>
+              <p className="font-sans text-lg text-gray-600 dark:text-gray-300">
+                Explore all available positions and find the perfect fit for your skills and passion.
+              </p>
             </div>
-          </section>
-        )}
+
+            <div className="grid gap-8">
+              {activejobs.map((job, index) => (
+                <Card
+                  key={job.id}
+                  className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-600"
+                >
+                  <CardHeader className="bg-gradient-to-r from-brand-blue to-brand-blue/80 text-white p-6">
+                    <div className="flex items-center justify-between flex-wrap gap-4">
+                      <div>
+                        <CardTitle className="font-sora text-xl lg:text-2xl font-bold mb-2">
+                          {job.title}
+                        </CardTitle>
+                        <div className="flex flex-wrap gap-4 text-blue-100">
+                          <span className="flex items-center gap-1">
+                            <Users className="w-4 h-4" />
+                            {job.department}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Briefcase className="w-4 h-4" />
+                            {job.type}
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <CalendarDays className="w-4 h-4" />
+                            Location: {job.location}
+                          </span>
+                        </div>
+                      </div>
+                      {job.featured && (
+                        <Badge
+                          variant="secondary"
+                          className="bg-brand-orange text-white"
+                        >
+                          Featured
+                        </Badge>
+                      )}
+                    </div>
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <p className="font-sans text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                      {job.description}
+                    </p>
+
+                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <h3 className="font-sora text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3 flex items-center">
+                          <Target className="w-5 h-5 mr-2 text-brand-blue" />
+                          Requirements:
+                        </h3>
+                        <ul className="space-y-2">
+                          {job.requirements.map((req, reqIndex) => (
+                            <li key={reqIndex} className="flex items-start">
+                              <CheckCircle2 className="w-4 h-4 text-green-500 dark:text-green-400 mr-2 mt-1 flex-shrink-0" />
+                              <span className="font-sans text-sm text-gray-600 dark:text-gray-400">
+                                {req}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h3 className="font-sora text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3 flex items-center">
+                          <Heart className="w-5 h-5 mr-2 text-brand-blue" />
+                          What You'll Get:
+                        </h3>
+                        <ul className="space-y-2">
+                          {job.benefits.map((benefit, benefitIndex) => (
+                            <li key={benefitIndex} className="flex items-start">
+                              <CheckCircle2 className="w-4 h-4 text-green-500 dark:text-green-400 mr-2 mt-1 flex-shrink-0" />
+                              <span className="font-sans text-sm text-gray-600 dark:text-gray-400">
+                                {benefit}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="bg-gray-50 dark:bg-slate-700 p-4 rounded-lg">
+                      <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
+                        <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                          <CalendarDays className="w-4 h-4" />
+                          <span>
+                            Application Deadline:{" "}
+                            <strong className="text-red-600 dark:text-red-400">
+                              {formatDate(job.deadline)}
+                            </strong>
+                          </span>
+                        </div>
+                        <Button
+                          asChild
+                          className="bg-brand-blue hover:bg-brand-blue/90 text-white"
+                        >
+                          <Link
+                            href={`mailto:${job.applyEmail}?subject=Application for ${job.title}`}
+                          >
+                            <Mail className="w-4 h-4 mr-2" />
+                            Apply Now
+                          </Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Why Work With Us */}
         <section className="py-16 lg:py-24 bg-gray-50 dark:bg-slate-800">
