@@ -16,17 +16,17 @@ const teamMembers = [
   {
     name: "Dr. Amit Kumar Gupta",
     role: "Founder, Director & CEO",
-    imageUrl: "/dr-amit-kumar-gupta-portrait.png",
+    imageUrl: "/amit_gupta.png",
   },
   {
     name: "Prapti Gupta",
     role: "Director",
-    imageUrl: "/prapti-gupta-portrait.png",
+    imageUrl: "/prapti_gupta.jpg",
   },
   {
     name: "Miss Himani Verma",
     role: "Chief Program Officer",
-    imageUrl: "/himani-verma-cpo.png",
+    imageUrl: "/himani_verma.png",
   },
 ];
 
@@ -35,24 +35,24 @@ const advisoryBoardMembers = [
     name: "Prof. Anupama Saxena",
     description:
       "Professor, Department of Political Science, Guru Ghasidas Vishwavidyalaya, Bilaspur, Chhattisgarh",
-    imageUrl: "/prof-anupama-saxena-portrait.png",
+    imageUrl: "/anupma_saxena.jpg",
   },
   {
     name: "Mr. Rajeev Tripathi",
     description:
       "Vice President Legal/Head Legal & CPIO with Goods and Services Tax Network (GSTN), a government of India SPV.",
-    imageUrl: "/rajeev-tripathi-portrait.png",
+    imageUrl: "/rajeev_tripathi.png",
   },
   {
     name: "Mr. Syam S. Rai",
     description:
       "Legal Professional, Advisory, Litigation & Compliance, Speaker, Author, Alumnus: University of Delhi (DU), Indian Law Institute (ILI), Indian Institute of Management Calcutta (IIM-C)",
-    imageUrl: "/portrait-syam-s-rai.png",
+    imageUrl: "/syam_rai.jpg",
   },
   {
     name: "Miss Himani Verma",
     description: "Former bureaucrat, Rajasthan Public Service Commission",
-    imageUrl: "/himani-verma-bureaucrat.png",
+    imageUrl: "/himani_verma.png",
   },
 ];
 
@@ -61,24 +61,24 @@ const visitingFellows = [
     name: "Dr. Sajjan Kumar Singh",
     description:
       "Roaming researcher. Political Analyst. Doctorate from Jawaharlal Nehru University, 2017.",
-    imageUrl: "/dr-sajjan-kumar-singh-portrait.png",
+    imageUrl: "/sajjan.jpg",
   },
   {
     name: "Dr. Anjali Kumari",
     description: "Lecturer, Planning and Research",
-    imageUrl: "/dr-anjali-kumari-portrait.png",
+    imageUrl: "/anjali.png",
   },
   {
     name: "Dr. Anindya Sundar Polley",
     description:
       "Assistant Professor, Department of English, Munger State University, Bihar",
-    imageUrl: "/portrait-anindya-sundar-polley.png",
+    imageUrl: "/anindya.png",
   },
   {
     name: "Vivek Kumar Hind",
     description:
       "Assistant Professor, Department of Political Science, Tilka Manjhi State University, Bihar",
-    imageUrl: "/placeholder.svg?width=200&height=200",
+    imageUrl: "/vivek_hind.png",
   },
 ];
 
