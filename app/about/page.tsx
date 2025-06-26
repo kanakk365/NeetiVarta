@@ -72,7 +72,7 @@ const visitingFellows = [
     name: "Dr. Anindya Sundar Polley",
     description:
       "Assistant Professor, Department of English, Munger State University, Bihar",
-    imageUrl: "/anindya.png",
+    imageUrl: "/anindya.jpg",
   },
   {
     name: "Vivek Kumar Hind",
@@ -141,10 +141,12 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="font-sans text-gray-700 dark:text-gray-300 leading-relaxed">
-                    To empower individuals, particularly in Tier 2 and Tier 3
-                    cities, with the knowledge and skills necessary to
-                    understand and influence public policy, and become active
-                    and informed citizens.
+                    Neeti Kaushal equips individuals from Tier-2 and Tier-3 cities
+                    of India and rural India with policy literacy, digital skills,
+                    and career pathways, transforming them into Citizen Consultants
+                    who support their communities. Through Neeti Sahayak Kendras
+                    (NSKs), these trained fellows provide localized guidance, ease
+                    access to government schemes, and bridge governance gaps.
                   </p>
                 </CardContent>
               </Card>
@@ -159,10 +161,13 @@ export default function AboutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="font-sans text-gray-700 dark:text-gray-300 leading-relaxed">
-                    To create a society where every individual, regardless of
-                    their geographic location, can contribute to policy-making
-                    and drive positive social change.
+                    We envision an inclusive democracy where everyone can understand,
+                    access, and influence public policy. By scaling Neeti Kaushal and
+                    NSKs nationwide, we aim to build a network of Citizen Consultants
+                    driving grassroots impact, civic engagement, and sustainable
+                    careers in public policy.
                   </p>
+                
                 </CardContent>
               </Card>
             </div>
