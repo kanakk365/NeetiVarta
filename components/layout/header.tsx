@@ -73,7 +73,7 @@ const navigationItems: NavItem[] = [
     items: [
       { title: "Courses", href: "/courses" },
       { title: "Events", href: "/events" },
-      { title: "Blogs", href: "/blogs" },
+      { title: "Blogs", href: "/comming-soon" },
     ],
     dropdownCta: { text: "View All Programs", href: "/courses" },
   },
@@ -347,7 +347,7 @@ export default function Header() {
                 : "border-gray-300 dark:border-slate-700 text-gray-700 dark:bg-transparent dark:text-gray-300 hover:bg-gray-100/50 dark:hover:bg-slate-800/50 hover:text-gray-900 dark:hover:text-gray-100"
             )}
           >
-            <Link href="/login">Login</Link>
+            <Link href="/comming-soon">Login</Link>
           </Button>
           {/* "Get Started" Button Removed */}
           {/* <Button

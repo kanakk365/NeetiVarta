@@ -6,70 +6,61 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     text: "Neeti Varta's internship program has provided me with invaluable research experience and skills, especially in policy analysis and writing.",
-    image:
-      "",
+    image: "",
     name: "Jeevesh Jumar Singh",
     role: "June Batch, 2024",
   },
   {
     text: "The mentorship and guidance I received during my internship at Neeti Varta have been exceptional, helping me grow both professionally and personally.",
-    image:
-      "",
+    image: "",
     name: "Sagar Sharma",
     role: "June Batch, 2024",
   },
   {
     text: "Working on real-world policy issues with Neeti Varta has given me a deeper understanding of the complexities of policy research and its impact.",
-    image:
-      "",
+    image: "",
     name: "Vedantee Raut",
     role: "June Batch, 2024",
   },
   {
     text: "The research opportunities at Neeti Varta have expanded my understanding of public policy and governance structures significantly.",
-    image:
-      "",
+    image: "",
     name: "Arjun Patel",
     role: "March Batch, 2024",
   },
   {
     text: "Through Neeti Varta's programs, I gained practical insights into policy implementation and its real-world challenges.",
-    image:
-      "",
+    image: "",
     name: "Priya Sharma",
     role: "March Batch, 2024",
   },
   {
     text: "The collaborative environment at Neeti Varta fostered critical thinking and analytical skills essential for policy research.",
-    image:
-      "",
+    image: "",
     name: "Rohit Kumar",
     role: "December Batch, 2023",
   },
   {
     text: "Neeti Varta's comprehensive approach to policy education has been instrumental in shaping my career in public administration.",
-    image:
-      "",
+    image: "",
     name: "Anjali Gupta",
     role: "December Batch, 2023",
   },
   {
     text: "The expert guidance and mentorship at Neeti Varta have been crucial in developing my research and analytical capabilities.",
-    image:
-      "",
+    image: "",
     name: "Vikash Singh",
     role: "September Batch, 2023",
   },
   {
     text: "Working with Neeti Varta has provided me with a comprehensive understanding of policy frameworks and governance systems.",
-    image:
-      "",
+    image: "",
     name: "Sneha Yadav",
     role: "September Batch, 2023",
   },
-   {
+  {
     text: "Interning with the Social Policy Lab at the Neeti Varta Institute of Policy Research was a hands-on experience that bridged policy theory and real-world application. Evaluating a government scheme in Chhattisgarh, I gained skills in stakeholder mapping, data analysis, and impact assessment using tools like the Evaluation Matrix and Theory of Change. This experience sharpened my research abilities and gave me a deeper understanding of governance, laying a strong foundation for a career in public policy and development.",
-    image:"/vanshika.jpg",
+    image: "/vanshika.jpg",
     name: "Vanshikha Tyagi",
     role: "September Batch, 2023",
   },
