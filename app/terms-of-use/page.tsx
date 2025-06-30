@@ -402,7 +402,7 @@ export default function TermsOfUsePage() {
               <h3>Contact Us:</h3>
               <p>
                 If You’ve have concerns or queries regarding this Agreement, You may write to us by email at
-                neetivarta.forum@gmail.com.
+                neetivarta.learning@gmail.com.
               </p>
             </div>
           </div>

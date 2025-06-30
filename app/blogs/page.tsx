@@ -22,79 +22,79 @@ interface BlogPost {
 }
 
 const blogPosts: BlogPost[] = [
-  {
-    id: "1",
-    title: "Digital Governance: Transforming Public Service Delivery in India",
-    excerpt: "Exploring how digital technologies are revolutionizing the way government services are delivered to citizens across India, from rural villages to metropolitan cities.",
-    content: "The digital transformation of government services in India has been nothing short of remarkable...",
-    author: "Dr. Rajesh Kumar",
-    publishDate: "2025-06-10",
-    readTime: "8 min read",
-    category: "Digital Policy",
-    tags: ["Digital India", "E-Governance", "Public Services", "Technology"],
-    image: "/policy-research-communication.png",
-    featured: true
-  },
-  {
-    id: "2",
-    title: "Climate Policy and Sustainable Development: India's Path Forward",
-    excerpt: "An in-depth analysis of India's climate policies and their alignment with sustainable development goals, examining challenges and opportunities.",
-    content: "As India navigates the complex landscape of climate change and sustainable development...",
-    author: "Dr. Priya Sharma",
-    publishDate: "2025-06-08",
-    readTime: "10 min read",
-    category: "Environment",
-    tags: ["Climate Change", "Sustainable Development", "Environment Policy"],
-    image: "/policy-discussion-group.png"
-  },
-  {
-    id: "3",
-    title: "Education Policy Reform: Building Tomorrow's Workforce",
-    excerpt: "Understanding the National Education Policy 2020 and its implications for skill development and workforce preparation in the 21st century.",
-    content: "The National Education Policy 2020 represents a paradigm shift in India's approach to education...",
-    author: "Prof. Anita Desai",
-    publishDate: "2025-06-05",
-    readTime: "6 min read",
-    category: "Education",
-    tags: ["NEP 2020", "Skill Development", "Education Reform"],
-    image: "/policy-workshop-diverse.png"
-  },
-  {
-    id: "4",
-    title: "Healthcare Policy in Post-Pandemic India: Lessons and Reforms",
-    excerpt: "Examining the evolution of healthcare policy in India following the COVID-19 pandemic and the reforms needed for a resilient health system.",
-    content: "The COVID-19 pandemic exposed critical gaps in India's healthcare infrastructure...",
-    author: "Dr. Suresh Gupta",
-    publishDate: "2025-06-03",
-    readTime: "7 min read",
-    category: "Healthcare",
-    tags: ["Healthcare Policy", "Pandemic Response", "Health Infrastructure"],
-    image: "/policy-research-collaboration.png"
-  },
-  {
-    id: "5",
-    title: "Financial Inclusion and Digital Banking: Policy Perspectives",
-    excerpt: "Analyzing India's journey towards financial inclusion through digital banking initiatives and the policy frameworks enabling this transformation.",
-    content: "India's financial inclusion story is one of remarkable innovation and policy intervention...",
-    author: "Mr. Vikash Agarwal",
-    publishDate: "2025-06-01",
-    readTime: "9 min read",
-    category: "Finance",
-    tags: ["Financial Inclusion", "Digital Banking", "FinTech Policy"],
-    image: "/community-advocacy-meeting.png"
-  },
-  {
-    id: "6",
-    title: "Urban Planning and Smart Cities: A Policy Framework for India",
-    excerpt: "Exploring the policy challenges and opportunities in India's urban development, with a focus on smart city initiatives and sustainable urban planning.",
-    content: "As India rapidly urbanizes, the need for effective urban planning policies becomes paramount...",
-    author: "Ar. Meera Patel",
-    publishDate: "2025-05-28",
-    readTime: "11 min read",
-    category: "Urban Development",
-    tags: ["Smart Cities", "Urban Planning", "Infrastructure Policy"],
-    image: "/indian-parliament-democracy.png"
-  }
+  // {
+  //   id: "1",
+  //   title: "Digital Governance: Transforming Public Service Delivery in India",
+  //   excerpt: "Exploring how digital technologies are revolutionizing the way government services are delivered to citizens across India, from rural villages to metropolitan cities.",
+  //   content: "The digital transformation of government services in India has been nothing short of remarkable...",
+  //   author: "Dr. Rajesh Kumar",
+  //   publishDate: "2025-06-10",
+  //   readTime: "8 min read",
+  //   category: "Digital Policy",
+  //   tags: ["Digital India", "E-Governance", "Public Services", "Technology"],
+  //   image: "/policy-research-communication.png",
+  //   featured: true
+  // },
+  // {
+  //   id: "2",
+  //   title: "Climate Policy and Sustainable Development: India's Path Forward",
+  //   excerpt: "An in-depth analysis of India's climate policies and their alignment with sustainable development goals, examining challenges and opportunities.",
+  //   content: "As India navigates the complex landscape of climate change and sustainable development...",
+  //   author: "Dr. Priya Sharma",
+  //   publishDate: "2025-06-08",
+  //   readTime: "10 min read",
+  //   category: "Environment",
+  //   tags: ["Climate Change", "Sustainable Development", "Environment Policy"],
+  //   image: "/policy-discussion-group.png"
+  // },
+  // {
+  //   id: "3",
+  //   title: "Education Policy Reform: Building Tomorrow's Workforce",
+  //   excerpt: "Understanding the National Education Policy 2020 and its implications for skill development and workforce preparation in the 21st century.",
+  //   content: "The National Education Policy 2020 represents a paradigm shift in India's approach to education...",
+  //   author: "Prof. Anita Desai",
+  //   publishDate: "2025-06-05",
+  //   readTime: "6 min read",
+  //   category: "Education",
+  //   tags: ["NEP 2020", "Skill Development", "Education Reform"],
+  //   image: "/policy-workshop-diverse.png"
+  // },
+  // {
+  //   id: "4",
+  //   title: "Healthcare Policy in Post-Pandemic India: Lessons and Reforms",
+  //   excerpt: "Examining the evolution of healthcare policy in India following the COVID-19 pandemic and the reforms needed for a resilient health system.",
+  //   content: "The COVID-19 pandemic exposed critical gaps in India's healthcare infrastructure...",
+  //   author: "Dr. Suresh Gupta",
+  //   publishDate: "2025-06-03",
+  //   readTime: "7 min read",
+  //   category: "Healthcare",
+  //   tags: ["Healthcare Policy", "Pandemic Response", "Health Infrastructure"],
+  //   image: "/policy-research-collaboration.png"
+  // },
+  // {
+  //   id: "5",
+  //   title: "Financial Inclusion and Digital Banking: Policy Perspectives",
+  //   excerpt: "Analyzing India's journey towards financial inclusion through digital banking initiatives and the policy frameworks enabling this transformation.",
+  //   content: "India's financial inclusion story is one of remarkable innovation and policy intervention...",
+  //   author: "Mr. Vikash Agarwal",
+  //   publishDate: "2025-06-01",
+  //   readTime: "9 min read",
+  //   category: "Finance",
+  //   tags: ["Financial Inclusion", "Digital Banking", "FinTech Policy"],
+  //   image: "/community-advocacy-meeting.png"
+  // },
+  // {
+  //   id: "6",
+  //   title: "Urban Planning and Smart Cities: A Policy Framework for India",
+  //   excerpt: "Exploring the policy challenges and opportunities in India's urban development, with a focus on smart city initiatives and sustainable urban planning.",
+  //   content: "As India rapidly urbanizes, the need for effective urban planning policies becomes paramount...",
+  //   author: "Ar. Meera Patel",
+  //   publishDate: "2025-05-28",
+  //   readTime: "11 min read",
+  //   category: "Urban Development",
+  //   tags: ["Smart Cities", "Urban Planning", "Infrastructure Policy"],
+  //   image: "/indian-parliament-democracy.png"
+  // }
 ]
 
 const categories = ["All", "Digital Policy", "Environment", "Education", "Healthcare", "Finance", "Urban Development"]

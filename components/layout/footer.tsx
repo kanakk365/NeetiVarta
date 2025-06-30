@@ -110,7 +110,7 @@ export default function Footer() {
                 <Twitter size={20} />
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/company/neeti-varta-institute-of-policy-research/"
                 aria-label="LinkedIn"
                 className="text-gray-400 dark:text-gray-500 hover:text-brand-orange dark:hover:text-brand-orange"
               >

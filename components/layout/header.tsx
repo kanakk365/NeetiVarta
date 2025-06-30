@@ -73,7 +73,7 @@ const navigationItems: NavItem[] = [
     items: [
       { title: "Courses", href: "/courses" },
       { title: "Events", href: "/events" },
-      { title: "Blogs", href: "/blogs" },
+      { title: "Insights", href: "/blogs" },
     ],
     dropdownCta: { text: "View All Programs", href: "/courses" },
   },
