@@ -101,7 +101,7 @@ function Hero() {
               className="gap-4 font-sans bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-blue dark:bg-transparent dark:border-gray-200/70 dark:text-gray-100 dark:hover:bg-slate-200 dark:hover:text-brand-blue px-8 py-3 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 w-full sm:w-auto min-w-[200px]"
               asChild
             >
-              <Link href="#contact">
+              <Link href="contact">
                 Jump on a call <PhoneCall className="w-4 h-4" />
               </Link>
             </Button>
@@ -112,7 +112,7 @@ function Hero() {
               // Overriding with specific brand color.
               asChild
             >
-              <Link href="/register">
+              <Link href="/comming-soon">
                 Sign up here <MoveRight className="w-4 h-4" />
               </Link>
             </Button>
