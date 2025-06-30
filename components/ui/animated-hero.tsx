@@ -49,7 +49,7 @@ function Hero() {
               className="gap-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 dark:bg-white/5 dark:hover:bg-white/10 dark:border-white/10 dark:text-gray-200" // More specific styling for this context
               asChild
             >
-              <Link href="/blog">
+              <Link href="/comming-soon">
                 Read our launch article <MoveRight className="w-4 h-4" />
               </Link>
             </Button>
