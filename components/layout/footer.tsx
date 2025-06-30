@@ -52,8 +52,8 @@ export default function Footer() {
             <h3 className="font-sora text-lg font-semibold text-gray-100 dark:text-white">Resources</h3>
             <ul className="space-y-2">
               {[
-                { name: "Blogs", href: "/blogs" },
-                { name: "Memberships", href: "/memberships" },
+                { name: "Insights", href: "/comming-soon" },
+                { name: "Memberships", href: "/comming-soon" },
                 { name: "Privacy Policy", href: "/privacy-policy" },
                 { name: "Terms of Use", href: "/terms-of-use" },
                 { name: "Refund Policy", href: "/refund-policy" }
@@ -96,19 +96,19 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link
-                href="#"
+                href="https://www.facebook.com/61561348765226/about/"
                 aria-label="Facebook"
                 className="text-gray-400 dark:text-gray-500 hover:text-brand-orange dark:hover:text-brand-orange"
               >
                 <Facebook size={20} />
               </Link>
-              <Link
+              {/* <Link
                 href="#"
                 aria-label="Twitter"
                 className="text-gray-400 dark:text-gray-500 hover:text-brand-orange dark:hover:text-brand-orange"
               >
                 <Twitter size={20} />
-              </Link>
+              </Link> */}
               <Link
                 href="https://www.linkedin.com/company/neeti-varta-institute-of-policy-research/"
                 aria-label="LinkedIn"
