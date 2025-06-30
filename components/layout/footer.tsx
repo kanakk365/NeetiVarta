@@ -27,23 +27,22 @@ export default function Footer() {
             <h3 className="font-sora text-lg font-semibold text-gray-100 dark:text-white">Quick Links</h3>
             <ul className="space-y-2">
               {[
-                "Home",
-                "About",
-                "Services",
-                "Testimonials",
-                "Achievements",
-                "Events",
-                "Collaborations",
-                "Gallery",
-                "Careers",
-                "Contact",
+                { name: "Home", href: "/" },
+                { name: "About", href: "/about" },
+                { name: "Courses", href: "/courses" },
+                { name: "Events", href: "/events" },
+                { name: "Blogs", href: "/blogs" },
+                { name: "Careers", href: "/careers" },
+                { name: "Contact", href: "/contact" },
+                { name: "Neeti Kaushal", href: "/neeti-kaushal" },
+                { name: "Neeti Sahayak", href: "/neeti-sahayak" },
               ].map((item) => (
-                <li key={item}>
+                <li key={item.name}>
                   <Link
-                    href={`#${item.toLowerCase()}`}
+                    href={item.href}
                     className="font-sans text-gray-300 dark:text-gray-400 hover:text-brand-orange dark:hover:text-brand-orange transition-colors duration-300 text-sm"
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -54,9 +53,10 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { name: "Blogs", href: "/blogs" },
-                { name: "Insight", href: "#" },
+                { name: "Memberships", href: "/memberships" },
                 { name: "Privacy Policy", href: "/privacy-policy" },
-                { name: "Terms of Use", href: "/terms-of-use" }
+                { name: "Terms of Use", href: "/terms-of-use" },
+                { name: "Refund Policy", href: "/refund-policy" }
               ].map((item) => (
                 <li key={item.name}>
                   <Link
